@@ -18,6 +18,7 @@ namespace Thor_Bar
             FormLogin login = new FormLogin(this);
             login.MdiParent = this;
             login.Show(); // Modal para forzar el login antes de abrir otras ventanas
+
         }
 
         // Método para abrir formularios dentro del MDI

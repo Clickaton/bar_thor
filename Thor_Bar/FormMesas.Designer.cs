@@ -33,21 +33,6 @@
             this.lblMesas = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.lblAdmin = new System.Windows.Forms.Label();
-            this.lblMesa1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.pbMesa12 = new System.Windows.Forms.PictureBox();
             this.pbMesa5 = new System.Windows.Forms.PictureBox();
             this.pbMesa15 = new System.Windows.Forms.PictureBox();
@@ -69,6 +54,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
+            this.lblExit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbMesa12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMesa5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMesa15)).BeginInit();
@@ -142,180 +128,6 @@
             this.lblAdmin.TabIndex = 8;
             this.lblAdmin.Text = "Administracion";
             this.lblAdmin.Click += new System.EventHandler(this.lblAdmin_Click);
-            // 
-            // lblMesa1
-            // 
-            this.lblMesa1.AutoSize = true;
-            this.lblMesa1.BackColor = System.Drawing.Color.LimeGreen;
-            this.lblMesa1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblMesa1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMesa1.Location = new System.Drawing.Point(301, 194);
-            this.lblMesa1.Name = "lblMesa1";
-            this.lblMesa1.Size = new System.Drawing.Size(77, 24);
-            this.lblMesa1.TabIndex = 25;
-            this.lblMesa1.Text = "Mesa 1";
-            this.lblMesa1.Click += new System.EventHandler(this.lblMesa1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LimeGreen;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(497, 350);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 24);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Mesa 6";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LimeGreen;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(680, 194);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 24);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Mesa 3";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LimeGreen;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(497, 194);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 24);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Mesa 2";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.LimeGreen;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(680, 350);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 24);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Mesa 7";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.LimeGreen;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(870, 194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 24);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Mesa 4";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.LimeGreen;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(301, 523);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 24);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Mesa 15";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.LimeGreen;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(301, 362);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 24);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Mesa 5";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.LimeGreen;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(870, 350);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 24);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Mesa 8";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.LimeGreen;
-            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(497, 495);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 24);
-            this.label9.TabIndex = 34;
-            this.label9.Text = "Mesa 9";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.LimeGreen;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(859, 495);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 24);
-            this.label10.TabIndex = 36;
-            this.label10.Text = "Mesa 11";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.LimeGreen;
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(680, 495);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 24);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "Mesa 10";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.LimeGreen;
-            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(497, 625);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 24);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Mesa 12";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.LimeGreen;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(680, 625);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 24);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "Mesa 13";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.LimeGreen;
-            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(859, 625);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 24);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Mesa 14";
             // 
             // pbMesa12
             // 
@@ -442,6 +254,7 @@
             this.pbMesa1.Size = new System.Drawing.Size(110, 109);
             this.pbMesa1.TabIndex = 12;
             this.pbMesa1.TabStop = false;
+            this.pbMesa1.Click += new System.EventHandler(this.pbMesa1_Click);
             // 
             // pbMesa3
             // 
@@ -464,7 +277,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox3.Location = new System.Drawing.Point(-1, 80);
+            this.pictureBox3.Location = new System.Drawing.Point(-1, 86);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(1272, 54);
             this.pictureBox3.TabIndex = 4;
@@ -474,7 +287,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 53);
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 49);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1272, 31);
             this.pictureBox2.TabIndex = 3;
@@ -522,33 +335,30 @@
             this.lblNombreUsuario.Location = new System.Drawing.Point(1096, 56);
             this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(50, 20);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(0, 20);
             this.lblNombreUsuario.TabIndex = 44;
-            this.lblNombreUsuario.Text = "Value";
+            // 
+            // lblExit
+            // 
+            this.lblExit.AutoSize = true;
+            this.lblExit.BackColor = System.Drawing.Color.LightGray;
+            this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExit.Location = new System.Drawing.Point(1059, 97);
+            this.lblExit.Name = "lblExit";
+            this.lblExit.Size = new System.Drawing.Size(51, 24);
+            this.lblExit.TabIndex = 45;
+            this.lblExit.Text = "Salir";
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // FormMesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 729);
+            this.ClientSize = new System.Drawing.Size(1083, 716);
+            this.Controls.Add(this.lblExit);
             this.Controls.Add(this.lblNombreUsuario);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblMesa1);
             this.Controls.Add(this.pbMesa12);
             this.Controls.Add(this.pbMesa5);
             this.Controls.Add(this.pbMesa15);
@@ -625,23 +435,9 @@
         private System.Windows.Forms.PictureBox pbMesa8;
         private System.Windows.Forms.PictureBox pbMesa5;
         private System.Windows.Forms.PictureBox pbMesa12;
-        private System.Windows.Forms.Label lblMesa1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblNombreUsuario;
+        private System.Windows.Forms.Label lblExit;
     }
 }

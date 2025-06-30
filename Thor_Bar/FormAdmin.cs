@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Windows.Forms;
+using Thor_Bar.Helpers;
 using static Mysqlx.Crud.Order.Types;
 
 namespace Thor_Bar
@@ -20,6 +21,11 @@ namespace Thor_Bar
             {
                 lblNombreUsuario.Text = "Usuario no identificado";
             }
+        }
+
+        private void lblNombreUsuario_Click(object sender, EventArgs e)
+        {
+           
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
@@ -430,6 +436,11 @@ namespace Thor_Bar
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            SesionHelper.CerrarSesion(this.MdiParent);
         }
     }
 

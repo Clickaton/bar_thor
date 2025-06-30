@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using Thor_Bar.Helpers;
 
 namespace Thor_Bar
 {
@@ -158,6 +159,11 @@ namespace Thor_Bar
             FormMain main = this.MdiParent as FormMain;
             if (main != null)
                 main.AbrirFormulario(new FormAdmin());
+        }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            SesionHelper.CerrarSesion(this.MdiParent); 
         }
     }
 }
