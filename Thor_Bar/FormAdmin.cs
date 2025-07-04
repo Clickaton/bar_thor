@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Windows.Forms;
+using Thor_Bar.Estilos;
 using Thor_Bar.Helpers;
 using static Mysqlx.Crud.Order.Types;
 
@@ -25,7 +27,7 @@ namespace Thor_Bar
 
         private void lblNombreUsuario_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
@@ -44,7 +46,54 @@ namespace Thor_Bar
             SQLiteCommand command = new SQLiteCommand(query, db.GetConnection());
             dgvUsuarios.CellClick += dgvUsuarios_CellClick;
 
+            CargarGastos();
+            CalcularTotal();
+            dgvGastos.CellClick += dgvGastos_CellClick;
+            EstilosDataGrid.AplicarEstilo(dgvGastos);
         }
+        private void CargarGastos()
+        {
+            try
+            {
+                DatabaseConnection db = new DatabaseConnection();
+                db.OpenConnection();
+
+                string query = "SELECT * FROM Gastos";
+                SQLiteDataAdapter da = new SQLiteDataAdapter(query, db.GetConnection());
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvGastos.DataSource = dt;
+
+                db.CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los gastos: " + ex.Message);
+            }
+
+        }
+
+        private void CalcularTotal()
+        {
+            double total = 0;
+
+            foreach (DataGridViewRow row in dgvGastos.Rows)
+            {
+                if (row.Cells["Monto"].Value != null)
+                {
+                    double monto;
+                    if (double.TryParse(row.Cells["Monto"].Value.ToString(), out monto))
+                    {
+                        total += monto;
+                    }
+                }
+            }
+
+            lblTotal.Text = $"Total: ${total:N2}";
+        }
+
+
 
         private List<Usuario> ObtenerUsuarios()
         {
@@ -442,7 +491,117 @@ namespace Thor_Bar
         {
             SesionHelper.CerrarSesion(this.MdiParent);
         }
+
+        private void tabGastos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGastosAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string descripcion = txtDesc.Text;
+                decimal monto = Convert.ToDecimal(txtMonto.Text);
+                string categoria = txtCategoria.Text;
+                string fecha = dtpFecha.Value.ToString("yyyy-MM-dd"); // Formato seguro para SQLite
+
+                AgregarGasto.Ejecutar(descripcion, monto, fecha, categoria);
+
+                CargarGastos();
+                CalcularTotal();
+
+                MessageBox.Show("✅ Gasto agregado correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error: " + ex.Message);
+            }
+        }
+
+        private void btnGastosModificar_Click(object sender, EventArgs e)
+        {
+            if (dgvGastos.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccioná un gasto para modificar.");
+                return;
+            }
+
+            try
+            {
+                int idSeleccionado = Convert.ToInt32(dgvGastos.CurrentRow.Cells["Id"].Value);
+                string descripcion = txtDesc.Text;
+                decimal monto = Convert.ToDecimal(txtMonto.Text);
+                string categoria = txtCategoria.Text;
+                DateTime fecha = dtpFecha.Value; // ⬅️ pasás directamente un DateTime
+
+                ModificarGasto.Ejecutar(idSeleccionado, descripcion, monto, fecha, categoria);
+
+                CargarGastos();
+                CalcularTotal();
+
+                MessageBox.Show("✏️ Gasto modificado correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar gasto: " + ex.Message);
+            }
+        }
+
+
+
+        private void dgvGastos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dgvGastos.Rows[e.RowIndex];
+
+                txtDesc.Text = fila.Cells["Descripcion"].Value?.ToString();
+                txtMonto.Text = fila.Cells["Monto"].Value?.ToString();
+                txtCategoria.Text = fila.Cells["Categoria"].Value?.ToString();
+
+                // Convertir la fecha desde texto a DateTime
+                if (DateTime.TryParse(fila.Cells["Fecha"].Value?.ToString(), out DateTime fecha))
+                {
+                    dtpFecha.Value = fecha;
+                }
+            }
+        }
+
+        private void dgvGastos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
+
+        }
+
+        private void btnGastosDel_Click(object sender, EventArgs e)
+        {
+            if (dgvGastos.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccioná un gasto para eliminar.");
+                return;
+            }
+
+            DialogResult confirmacion = MessageBox.Show("¿Estás seguro de que querés eliminar este gasto?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (confirmacion == DialogResult.Yes)
+            {
+                try
+                {
+                    int idSeleccionado = Convert.ToInt32(dgvGastos.CurrentRow.Cells["Id"].Value);
+                    EliminarGasto.Ejecutar(idSeleccionado);
+
+                    CargarGastos();
+                    CalcularTotal();
+
+                    MessageBox.Show("🗑️ Gasto eliminado correctamente");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar gasto: " + ex.Message);
+                }
+            }
+        }
     }
 
 
-}
+    }

@@ -62,6 +62,19 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.tabGastos = new System.Windows.Forms.TabPage();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTotalTitle = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblMonto = new System.Windows.Forms.Label();
+            this.lblDesc = new System.Windows.Forms.Label();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.txtMonto = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.btnGastosDel = new System.Windows.Forms.Button();
+            this.btnGastosMod = new System.Windows.Forms.Button();
+            this.btnGastosAdd = new System.Windows.Forms.Button();
             this.lblGastos = new System.Windows.Forms.Label();
             this.dgvGastos = new System.Windows.Forms.DataGridView();
             this.tabCaja = new System.Windows.Forms.TabPage();
@@ -297,7 +310,7 @@
             this.tabUsers.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabUsers.Location = new System.Drawing.Point(4, 25);
             this.tabUsers.Name = "tabUsers";
-            this.tabUsers.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabUsers.Padding = new System.Windows.Forms.Padding(3);
             this.tabUsers.Size = new System.Drawing.Size(1264, 569);
             this.tabUsers.TabIndex = 0;
             this.tabUsers.Text = "Usuarios";
@@ -308,7 +321,7 @@
             // 
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Location = new System.Drawing.Point(773, 377);
-            this.cmbRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbRol.Margin = new System.Windows.Forms.Padding(2);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(142, 28);
             this.cmbRol.TabIndex = 25;
@@ -317,7 +330,7 @@
             // 
             this.cbEstado.AutoSize = true;
             this.cbEstado.Location = new System.Drawing.Point(968, 377);
-            this.cbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(77, 24);
             this.cbEstado.TabIndex = 24;
@@ -327,7 +340,7 @@
             // txtSueldo
             // 
             this.txtSueldo.Location = new System.Drawing.Point(773, 443);
-            this.txtSueldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSueldo.Margin = new System.Windows.Forms.Padding(2);
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(142, 26);
             this.txtSueldo.TabIndex = 23;
@@ -335,7 +348,7 @@
             // txtContacto
             // 
             this.txtContacto.Location = new System.Drawing.Point(595, 443);
-            this.txtContacto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContacto.Margin = new System.Windows.Forms.Padding(2);
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Size = new System.Drawing.Size(142, 26);
             this.txtContacto.TabIndex = 23;
@@ -343,7 +356,7 @@
             // txtDocumento
             // 
             this.txtDocumento.Location = new System.Drawing.Point(595, 379);
-            this.txtDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(2);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(142, 26);
             this.txtDocumento.TabIndex = 23;
@@ -351,7 +364,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(413, 443);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(142, 26);
             this.txtApellido.TabIndex = 23;
@@ -359,7 +372,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(413, 379);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(142, 26);
             this.txtNombre.TabIndex = 23;
@@ -426,21 +439,147 @@
             // 
             // tabGastos
             // 
+            this.tabGastos.Controls.Add(this.dtpFecha);
+            this.tabGastos.Controls.Add(this.lblTotal);
+            this.tabGastos.Controls.Add(this.lblTotalTitle);
+            this.tabGastos.Controls.Add(this.lblCategoria);
+            this.tabGastos.Controls.Add(this.lblFecha);
+            this.tabGastos.Controls.Add(this.lblMonto);
+            this.tabGastos.Controls.Add(this.lblDesc);
+            this.tabGastos.Controls.Add(this.txtCategoria);
+            this.tabGastos.Controls.Add(this.txtMonto);
+            this.tabGastos.Controls.Add(this.txtDesc);
+            this.tabGastos.Controls.Add(this.btnGastosDel);
+            this.tabGastos.Controls.Add(this.btnGastosMod);
+            this.tabGastos.Controls.Add(this.btnGastosAdd);
             this.tabGastos.Controls.Add(this.lblGastos);
             this.tabGastos.Controls.Add(this.dgvGastos);
             this.tabGastos.Location = new System.Drawing.Point(4, 25);
             this.tabGastos.Name = "tabGastos";
-            this.tabGastos.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabGastos.Padding = new System.Windows.Forms.Padding(3);
             this.tabGastos.Size = new System.Drawing.Size(1264, 569);
             this.tabGastos.TabIndex = 1;
             this.tabGastos.Text = "Gastos";
             this.tabGastos.UseVisualStyleBackColor = true;
+            this.tabGastos.Click += new System.EventHandler(this.tabGastos_Click);
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(640, 428);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(143, 26);
+            this.dtpFecha.TabIndex = 15;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(968, 44);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(19, 20);
+            this.lblTotal.TabIndex = 14;
+            this.lblTotal.Text = "0";
+            // 
+            // lblTotalTitle
+            // 
+            this.lblTotalTitle.AutoSize = true;
+            this.lblTotalTitle.Location = new System.Drawing.Point(824, 44);
+            this.lblTotalTitle.Name = "lblTotalTitle";
+            this.lblTotalTitle.Size = new System.Drawing.Size(138, 20);
+            this.lblTotalTitle.TabIndex = 13;
+            this.lblTotalTitle.Text = "Total de gastos:";
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(795, 403);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(87, 20);
+            this.lblCategoria.TabIndex = 12;
+            this.lblCategoria.Text = "Categoria";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(636, 403);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(59, 20);
+            this.lblFecha.TabIndex = 11;
+            this.lblFecha.Text = "Fecha";
+            // 
+            // lblMonto
+            // 
+            this.lblMonto.AutoSize = true;
+            this.lblMonto.Location = new System.Drawing.Point(483, 403);
+            this.lblMonto.Name = "lblMonto";
+            this.lblMonto.Size = new System.Drawing.Size(59, 20);
+            this.lblMonto.TabIndex = 10;
+            this.lblMonto.Text = "Monto";
+            // 
+            // lblDesc
+            // 
+            this.lblDesc.AutoSize = true;
+            this.lblDesc.Location = new System.Drawing.Point(322, 403);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(103, 20);
+            this.lblDesc.TabIndex = 9;
+            this.lblDesc.Text = "Descripción";
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Location = new System.Drawing.Point(799, 428);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(143, 26);
+            this.txtCategoria.TabIndex = 8;
+            // 
+            // txtMonto
+            // 
+            this.txtMonto.Location = new System.Drawing.Point(482, 428);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(143, 26);
+            this.txtMonto.TabIndex = 6;
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Location = new System.Drawing.Point(324, 428);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(143, 26);
+            this.txtDesc.TabIndex = 5;
+            // 
+            // btnGastosDel
+            // 
+            this.btnGastosDel.Location = new System.Drawing.Point(703, 512);
+            this.btnGastosDel.Name = "btnGastosDel";
+            this.btnGastosDel.Size = new System.Drawing.Size(100, 35);
+            this.btnGastosDel.TabIndex = 4;
+            this.btnGastosDel.Text = "&Eliminar";
+            this.btnGastosDel.UseVisualStyleBackColor = true;
+            this.btnGastosDel.Click += new System.EventHandler(this.btnGastosDel_Click);
+            // 
+            // btnGastosMod
+            // 
+            this.btnGastosMod.Location = new System.Drawing.Point(583, 512);
+            this.btnGastosMod.Name = "btnGastosMod";
+            this.btnGastosMod.Size = new System.Drawing.Size(100, 35);
+            this.btnGastosMod.TabIndex = 3;
+            this.btnGastosMod.Text = "&Modificar";
+            this.btnGastosMod.UseVisualStyleBackColor = true;
+            this.btnGastosMod.Click += new System.EventHandler(this.btnGastosModificar_Click);
+            // 
+            // btnGastosAdd
+            // 
+            this.btnGastosAdd.Location = new System.Drawing.Point(461, 512);
+            this.btnGastosAdd.Name = "btnGastosAdd";
+            this.btnGastosAdd.Size = new System.Drawing.Size(103, 35);
+            this.btnGastosAdd.TabIndex = 2;
+            this.btnGastosAdd.Text = "&Agregar";
+            this.btnGastosAdd.UseVisualStyleBackColor = true;
+            this.btnGastosAdd.Click += new System.EventHandler(this.btnGastosAdd_Click);
             // 
             // lblGastos
             // 
             this.lblGastos.AutoSize = true;
             this.lblGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGastos.Location = new System.Drawing.Point(502, 171);
+            this.lblGastos.Location = new System.Drawing.Point(502, 35);
             this.lblGastos.Name = "lblGastos";
             this.lblGastos.Size = new System.Drawing.Size(260, 33);
             this.lblGastos.TabIndex = 1;
@@ -449,17 +588,18 @@
             // dgvGastos
             // 
             this.dgvGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGastos.Location = new System.Drawing.Point(512, 248);
+            this.dgvGastos.Location = new System.Drawing.Point(219, 92);
             this.dgvGastos.Name = "dgvGastos";
             this.dgvGastos.RowHeadersWidth = 51;
-            this.dgvGastos.Size = new System.Drawing.Size(240, 150);
+            this.dgvGastos.Size = new System.Drawing.Size(827, 284);
             this.dgvGastos.TabIndex = 0;
+            this.dgvGastos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGastos_CellContentClick);
             // 
             // tabCaja
             // 
             this.tabCaja.Location = new System.Drawing.Point(4, 25);
             this.tabCaja.Name = "tabCaja";
-            this.tabCaja.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabCaja.Padding = new System.Windows.Forms.Padding(3);
             this.tabCaja.Size = new System.Drawing.Size(1264, 569);
             this.tabCaja.TabIndex = 2;
             this.tabCaja.Text = "Caja";
@@ -469,7 +609,7 @@
             // 
             this.tabProveedores.Location = new System.Drawing.Point(4, 25);
             this.tabProveedores.Name = "tabProveedores";
-            this.tabProveedores.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabProveedores.Padding = new System.Windows.Forms.Padding(3);
             this.tabProveedores.Size = new System.Drawing.Size(1264, 569);
             this.tabProveedores.TabIndex = 3;
             this.tabProveedores.Text = "Proveedores";
@@ -479,7 +619,7 @@
             // 
             this.tabComprobantes.Location = new System.Drawing.Point(4, 25);
             this.tabComprobantes.Name = "tabComprobantes";
-            this.tabComprobantes.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabComprobantes.Padding = new System.Windows.Forms.Padding(3);
             this.tabComprobantes.Size = new System.Drawing.Size(1264, 569);
             this.tabComprobantes.TabIndex = 4;
             this.tabComprobantes.Text = "Comprobantes";
@@ -625,5 +765,18 @@
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblExit;
+        private System.Windows.Forms.Button btnGastosAdd;
+        private System.Windows.Forms.Button btnGastosDel;
+        private System.Windows.Forms.Button btnGastosMod;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.TextBox txtMonto;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblMonto;
+        private System.Windows.Forms.Label lblDesc;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblTotalTitle;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

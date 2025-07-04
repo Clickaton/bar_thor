@@ -117,7 +117,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarGasto.cs" />
     <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="EliminarGasto.cs" />
+    <Compile Include="EstilosDatagrid.cs" />
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +164,7 @@
       <DependentUpon>FormStock.cs</DependentUpon>
     </Compile>
     <Compile Include="MesaPosicion.cs" />
+    <Compile Include="ModificarGasto.cs" />
     <Compile Include="Plato.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
