@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|c:\\users\\nuwanda\\source\\repos\\thor_bar\\thor_bar\\sesionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\sesionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\sesionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\modificargasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|c:\\users\\nuwanda\\source\\repos\\thor_bar\\thor_bar\\formcocina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\formcocina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formcocina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -70,8 +70,7 @@
               "RelativeToolTip": "Thor_Bar\\SesionHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T19:12:49.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-05T19:12:49.816Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "Thor_Bar\\ModificarGasto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T16:14:09.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-03T16:14:09.141Z"
             },
             {
               "$type": "Document",
@@ -108,8 +106,7 @@
               "RelativeToolTip": "Thor_Bar\\FormAdmin.Designer.cs",
               "ViewState": "AgIAAEoBAAAAAAAAAAAAAC4CAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T16:19:02.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-03T16:19:02.68Z"
             },
             {
               "$type": "Document",
@@ -120,8 +117,7 @@
               "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormCocina.cs [Dise\u00F1o]",
               "RelativeToolTip": "Thor_Bar\\FormCocina.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T01:47:00.243Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-06-24T01:47:00.243Z"
             },
             {
               "$type": "Document",
@@ -133,8 +129,7 @@
               "RelativeToolTip": "Thor_Bar\\FormPedidoMesa.cs",
               "ViewState": "AgIAAIYAAAAAAAAAAAAawKEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T14:22:12.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T14:22:12.429Z"
             },
             {
               "$type": "Document",
@@ -145,8 +140,7 @@
               "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormPedidoMesa.cs [Dise\u00F1o]",
               "RelativeToolTip": "Thor_Bar\\FormPedidoMesa.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T14:22:07.855Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-06-30T14:22:07.855Z"
             },
             {
               "$type": "Document",
@@ -158,8 +152,7 @@
               "RelativeToolTip": "Thor_Bar\\FormCocina.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAQwGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T17:51:06.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-05T17:51:06.445Z"
             },
             {
               "$type": "Document",
@@ -171,8 +164,7 @@
               "RelativeToolTip": "Thor_Bar\\FormMesas.cs",
               "ViewState": "AgIAAIIAAAAAAAAAAAAQwJsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T14:30:30.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T14:30:30.205Z"
             },
             {
               "$type": "Document",
