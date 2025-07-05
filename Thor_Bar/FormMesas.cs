@@ -1,23 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
+using Thor_Bar.Helpers;
 
 namespace Thor_Bar
 {
     public partial class FormMesas : Form
     {
+        private bool arrastrando = false;
+        private bool fueArrastrado = false;
+        private Point offset;
+        private PictureBox mesaSeleccionada = null;
+        private const string RutaArchivoMesas = "mesas_posiciones.txt";
+
         public FormMesas()
         {
             InitializeComponent();
+
             if (SesionGlobal.UsuarioActual != null)
-            {
                 lblNombreUsuario.Text = $"Bienvenido, {SesionGlobal.UsuarioActual.nombre}";
-            }
             else
-            {
                 lblNombreUsuario.Text = "Usuario no identificado";
-            }
         }
 
         private void FormMesas_Load(object sender, EventArgs e)
@@ -27,50 +33,55 @@ namespace Thor_Bar
                 if (ctrl is PictureBox pb && pb.Name.StartsWith("pbMesa"))
                 {
                     int numeroMesa = int.Parse(pb.Name.Replace("pbMesa", ""));
-                    pb.Click += Mesa_Click;
                     pb.Tag = numeroMesa;
+
+                    pb.Click += Mesa_Click;
+                    pb.MouseDown += Mesa_MouseDown;
+                    pb.MouseMove += Mesa_MouseMove;
+                    pb.MouseUp += Mesa_MouseUp;
+                    pb.Paint += Mesa_Paint;
 
                     ActualizarVisualMesa(pb, numeroMesa);
                 }
             }
+
+            CargarPosicionesMesas();
         }
 
         private void Mesa_Click(object sender, EventArgs e)
         {
+            if (fueArrastrado)
+            {
+                fueArrastrado = false;
+                return;
+            }
+
             PictureBox pb = sender as PictureBox;
             if (pb == null) return;
 
             int numeroMesa = pb.Tag is int n ? n : 0;
+            string estadoMesa = ObtenerEstadoMesa(numeroMesa);
 
-            FormPedidoMesa formPedido = new FormPedidoMesa(numeroMesa);
-            formPedido.StartPosition = FormStartPosition.CenterScreen;
-            formPedido.Size = new Size(400, 500);
-            formPedido.ShowDialog();
-
-            // Refrescar visual después del pedido
-            ActualizarVisualMesa(pb, numeroMesa);
-        }
-
-        private void ActualizarVisualMesa(PictureBox pb, int numeroMesa)
-        {
-            string estado = ObtenerEstadoMesa(numeroMesa);
-
-            // Colores según estado
-            Color colorFondo = estado == "ocupada" ? Color.Red : Color.Green;
-
-            // Actualizar PictureBox
-            pb.BackColor = colorFondo;
-
-            // Buscar y actualizar Label asociado
-            string labelName = "lblMesa" + numeroMesa;
-            Control[] encontrados = this.Controls.Find(labelName, true);
-            if (encontrados.Length > 0 && encontrados[0] is Label lbl)
+            if (estadoMesa == "ocupada")
             {
-                lbl.BackColor = pb.BackColor;
-                lbl.ForeColor = Color.Black;
-                // Opcional: mostrar el estado en texto
-                // lbl.Text = $"Mesa {numeroMesa} ({estado})";
+                int idPedido = ObtenerPedidoActivoPorMesa(numeroMesa);
+                if (idPedido > 0)
+                {
+                    FormPedidoMesa formPedido = new FormPedidoMesa(numeroMesa, idPedido);
+                    formPedido.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró un pedido activo para esta mesa.");
+                }
             }
+            else
+            {
+                FormPedidoMesa formPedido = new FormPedidoMesa(numeroMesa);
+                formPedido.ShowDialog();
+            }
+
+            ActualizarVisualMesa(pb, numeroMesa); // refresca el color después del cierre o nuevo pedido
         }
 
         private string ObtenerEstadoMesa(int numero)
@@ -95,28 +106,195 @@ namespace Thor_Bar
             }
         }
 
+        private int ObtenerPedidoActivoPorMesa(int numeroMesa)
+        {
+            try
+            {
+                using (var conn = new SQLiteConnection("Data Source=thor_bar.sqlite"))
+                {
+                    conn.Open();
+
+                    string query = @"
+                SELECT id, estado FROM pedidos 
+                WHERE mesa = @mesa AND 
+                (estado IS NULL OR estado = '' OR LOWER(estado) = 'abierto') 
+                ORDER BY id DESC LIMIT 1";
+
+                    using (var cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@mesa", numeroMesa);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                int id = reader.GetInt32(0);
+                                string estado = reader.IsDBNull(1) ? "" : reader.GetString(1);
+
+                                if (string.IsNullOrWhiteSpace(estado))
+                                {
+                                    // Actualizamos el estado a "abierto" si estaba vacío o nulo
+                                    using (var update = new SQLiteCommand("UPDATE pedidos SET estado = 'abierto' WHERE id = @id", conn))
+                                    {
+                                        update.Parameters.AddWithValue("@id", id);
+                                        update.ExecuteNonQuery();
+                                    }
+                                }
+
+                                return id;
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                // Logueá si querés guardar errores para depuración
+            }
+
+            return 0;
+        }
+
+
+        private void ActualizarVisualMesa(PictureBox pb, int numeroMesa)
+        {
+            string estado = ObtenerEstadoMesa(numeroMesa);
+            Color colorFondo = estado == "ocupada" ? Color.Red : Color.Green;
+
+            pb.BackColor = colorFondo;
+            pb.Invalidate();
+        }
+
+        private void Mesa_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                arrastrando = true;
+                fueArrastrado = false;
+                mesaSeleccionada = sender as PictureBox;
+                offset = e.Location;
+            }
+        }
+
+        private void Mesa_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (arrastrando && mesaSeleccionada != null)
+            {
+                Point nuevaPos = mesaSeleccionada.Location;
+                nuevaPos.X += e.X - offset.X;
+                nuevaPos.Y += e.Y - offset.Y;
+                mesaSeleccionada.Location = nuevaPos;
+
+                fueArrastrado = true;
+            }
+        }
+
+        private void Mesa_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                arrastrando = false;
+
+                if (mesaSeleccionada != null)
+                {
+                    GuardarPosicionesMesas();
+                    mesaSeleccionada = null;
+                }
+            }
+        }
+
+        private void Mesa_Paint(object sender, PaintEventArgs e)
+        {
+            PictureBox pb = sender as PictureBox;
+            if (pb == null || pb.Tag == null) return;
+
+            int numeroMesa = (int)pb.Tag;
+            string texto = $"Mesa {numeroMesa}";
+
+            using (Font fuente = new Font("Arial", 16, FontStyle.Bold))
+            using (Brush pincel = new SolidBrush(Color.Black))
+            using (StringFormat formato = new StringFormat
+            {
+                Alignment = StringAlignment.Center,
+                LineAlignment = StringAlignment.Center
+            })
+            {
+                e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+                e.Graphics.DrawString(texto, fuente, pincel, pb.ClientRectangle, formato);
+            }
+        }
+
+        private void GuardarPosicionesMesas()
+        {
+            List<string> lineas = new List<string>();
+
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is PictureBox pb && pb.Name.StartsWith("pbMesa") && pb.Tag is int numero)
+                {
+                    string linea = $"{numero},{pb.Location.X},{pb.Location.Y}";
+                    lineas.Add(linea);
+                }
+            }
+
+            File.WriteAllLines(RutaArchivoMesas, lineas);
+        }
+
+        private void CargarPosicionesMesas()
+        {
+            if (!File.Exists(RutaArchivoMesas)) return;
+
+            try
+            {
+                string[] lineas = File.ReadAllLines(RutaArchivoMesas);
+
+                foreach (string linea in lineas)
+                {
+                    string[] partes = linea.Split(',');
+                    if (partes.Length == 3 &&
+                        int.TryParse(partes[0], out int numero) &&
+                        int.TryParse(partes[1], out int x) &&
+                        int.TryParse(partes[2], out int y))
+                    {
+                        string nombre = $"pbMesa{numero}";
+                        Control[] encontrados = this.Controls.Find(nombre, true);
+                        if (encontrados.Length > 0 && encontrados[0] is PictureBox pb)
+                        {
+                            pb.Location = new Point(x, y);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar posiciones de mesas: " + ex.Message);
+            }
+        }
+
+        // Métodos del menú (si usás navegación por etiquetas)
         private void lblCocina_Click(object sender, EventArgs e)
         {
-            if (this.MdiParent is FormMain main
-                && (SesionGlobal.UsuarioActual.rol == RolUsuario.Administrador
-                || SesionGlobal.UsuarioActual.rol == RolUsuario.Cocinero))
+            if (this.MdiParent is FormMain main &&
+                (SesionGlobal.UsuarioActual.rol == RolUsuario.Administrador ||
+                 SesionGlobal.UsuarioActual.rol == RolUsuario.Cocinero))
             {
                 main.AbrirFormulario(new FormCocina());
             }
-            else {
-                MessageBox.Show("Usted no tiene los permisos para poder acceder a esta sección.");
+            else
+            {
+                MessageBox.Show("Usted no tiene los permisos para acceder a la cocina.");
             }
         }
 
         private void lblAdmin_Click(object sender, EventArgs e)
         {
-            if (this.MdiParent is FormMain main && SesionGlobal.UsuarioActual.rol == RolUsuario.Administrador)
+            if (this.MdiParent is FormMain main &&
+                SesionGlobal.UsuarioActual.rol == RolUsuario.Administrador)
             {
                 main.AbrirFormulario(new FormAdmin());
             }
             else
             {
-                MessageBox.Show("Usted no tiene los permisos para poder acceder a esta sección.");
+                MessageBox.Show("Acceso denegado al módulo de administración.");
             }
         }
 
@@ -126,12 +304,18 @@ namespace Thor_Bar
                 main.AbrirFormulario(new FormStock());
         }
 
-        // Métodos de evento vacíos (opcionales)
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            SesionHelper.CerrarSesion(this.MdiParent);
+        }
+
+        // Métodos vacíos opcionales
         private void pictureBox1_Click(object sender, EventArgs e) { }
         private void pictureBox2_Click(object sender, EventArgs e) { }
         private void pictureBox3_Click(object sender, EventArgs e) { }
         private void pictureBox4_Click(object sender, EventArgs e) { }
         private void lblMesas_Click(object sender, EventArgs e) { }
         private void lblMesa1_Click(object sender, EventArgs e) { }
+        private void pbMesa1_Click(object sender, EventArgs e) { }
     }
 }

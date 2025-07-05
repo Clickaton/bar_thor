@@ -37,6 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.flpPedidos = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblExit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -141,11 +142,24 @@
             this.flpPedidos.TabIndex = 43;
             this.flpPedidos.Paint += new System.Windows.Forms.PaintEventHandler(this.flpPedidos_Paint);
             // 
+            // lblExit
+            // 
+            this.lblExit.AutoSize = true;
+            this.lblExit.BackColor = System.Drawing.Color.LightGray;
+            this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExit.Location = new System.Drawing.Point(1201, 96);
+            this.lblExit.Name = "lblExit";
+            this.lblExit.Size = new System.Drawing.Size(51, 24);
+            this.lblExit.TabIndex = 46;
+            this.lblExit.Text = "Salir";
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
+            // 
             // FormCocina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 729);
+            this.Controls.Add(this.lblExit);
             this.Controls.Add(this.flpPedidos);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lblAdmin);
@@ -179,5 +193,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.FlowLayoutPanel flpPedidos;
+        private System.Windows.Forms.Label lblExit;
     }
 }

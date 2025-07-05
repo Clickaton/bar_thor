@@ -1,16 +1,11 @@
-﻿namespace Thor_Bar
+﻿using System;
+
+namespace Thor_Bar
 {
     partial class FormPedidoMesa
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +17,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.SuspendLayout();
@@ -39,11 +30,16 @@
             this.Text = "FormPedidoMesa";
             this.Load += new System.EventHandler(this.FormPedidoMesa_Load);
             this.ResumeLayout(false);
-
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dgvProductos;
+
+        // ✅ Este método tiene que ir DENTRO de la clase
+        private void FormPedidoMesa_Load(object sender, EventArgs e)
+        {
+            // Puedes dejarlo vacío si no lo usás.
+        }
     }
 }
