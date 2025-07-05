@@ -50,12 +50,12 @@ namespace Thor_Bar
                 db.OpenConnection();
 
                 string query = @"
-                    SELECT p.id AS PedidoId, p.mesa, pr.nombre AS Producto, dp.cantidad
-                    FROM pedidos p
-                    JOIN detalles_pedido dp ON p.id = dp.pedido_id
-                    JOIN productos pr ON pr.id = dp.producto_id
-                    WHERE p.estado IS NULL OR p.estado = 'pendiente'
-                    ORDER BY p.id DESC";
+            SELECT p.id AS PedidoId, p.mesa, pr.nombre AS Producto, dp.cantidad
+            FROM pedidos p
+            JOIN detalles_pedido dp ON p.id = dp.pedido_id
+            JOIN productos pr ON pr.id = dp.producto_id
+            WHERE LOWER(p.estado) = 'abierto'
+            ORDER BY p.id DESC";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, db.GetConnection());
                 SQLiteDataReader reader = cmd.ExecuteReader();
@@ -77,11 +77,11 @@ namespace Thor_Bar
                         agrupados[pedidoId] = nuevoPedido;
                     }
 
-                    ProductoDelPedido detalle = new ProductoDelPedido();
-                    detalle.Producto = producto;
-                    detalle.Cantidad = cantidad;
-
-                    agrupados[pedidoId].Detalles.Add(detalle);
+                    agrupados[pedidoId].Detalles.Add(new ProductoDelPedido
+                    {
+                        Producto = producto,
+                        Cantidad = cantidad
+                    });
                 }
 
                 lista = new List<PedidoAgrupado>(agrupados.Values);
@@ -94,6 +94,7 @@ namespace Thor_Bar
 
             return lista;
         }
+
 
         private void MostrarPedidosAgrupados(List<PedidoAgrupado> pedidos)
         {

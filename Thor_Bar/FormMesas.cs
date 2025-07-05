@@ -21,13 +21,9 @@ namespace Thor_Bar
             InitializeComponent();
 
             if (SesionGlobal.UsuarioActual != null)
-            {
                 lblNombreUsuario.Text = $"Bienvenido, {SesionGlobal.UsuarioActual.nombre}";
-            }
             else
-            {
                 lblNombreUsuario.Text = "Usuario no identificado";
-            }
         }
 
         private void FormMesas_Load(object sender, EventArgs e)
@@ -64,22 +60,28 @@ namespace Thor_Bar
             if (pb == null) return;
 
             int numeroMesa = pb.Tag is int n ? n : 0;
+            string estadoMesa = ObtenerEstadoMesa(numeroMesa);
 
-            FormPedidoMesa formPedido = new FormPedidoMesa(numeroMesa);
-            formPedido.StartPosition = FormStartPosition.CenterScreen;
-            formPedido.Size = new Size(400, 500);
-            formPedido.ShowDialog();
+            if (estadoMesa == "ocupada")
+            {
+                int idPedido = ObtenerPedidoActivoPorMesa(numeroMesa);
+                if (idPedido > 0)
+                {
+                    FormPedidoMesa formPedido = new FormPedidoMesa(numeroMesa, idPedido);
+                    formPedido.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró un pedido activo para esta mesa.");
+                }
+            }
+            else
+            {
+                FormPedidoMesa formPedido = new FormPedidoMesa(numeroMesa);
+                formPedido.ShowDialog();
+            }
 
-            ActualizarVisualMesa(pb, numeroMesa);
-        }
-
-        private void ActualizarVisualMesa(PictureBox pb, int numeroMesa)
-        {
-            string estado = ObtenerEstadoMesa(numeroMesa);
-            Color colorFondo = estado == "ocupada" ? Color.Red : Color.Green;
-
-            pb.BackColor = colorFondo;
-            pb.Invalidate();
+            ActualizarVisualMesa(pb, numeroMesa); // refresca el color después del cierre o nuevo pedido
         }
 
         private string ObtenerEstadoMesa(int numero)
@@ -102,6 +104,64 @@ namespace Thor_Bar
             {
                 return "libre";
             }
+        }
+
+        private int ObtenerPedidoActivoPorMesa(int numeroMesa)
+        {
+            try
+            {
+                using (var conn = new SQLiteConnection("Data Source=thor_bar.sqlite"))
+                {
+                    conn.Open();
+
+                    string query = @"
+                SELECT id, estado FROM pedidos 
+                WHERE mesa = @mesa AND 
+                (estado IS NULL OR estado = '' OR LOWER(estado) = 'abierto') 
+                ORDER BY id DESC LIMIT 1";
+
+                    using (var cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@mesa", numeroMesa);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                int id = reader.GetInt32(0);
+                                string estado = reader.IsDBNull(1) ? "" : reader.GetString(1);
+
+                                if (string.IsNullOrWhiteSpace(estado))
+                                {
+                                    // Actualizamos el estado a "abierto" si estaba vacío o nulo
+                                    using (var update = new SQLiteCommand("UPDATE pedidos SET estado = 'abierto' WHERE id = @id", conn))
+                                    {
+                                        update.Parameters.AddWithValue("@id", id);
+                                        update.ExecuteNonQuery();
+                                    }
+                                }
+
+                                return id;
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                // Logueá si querés guardar errores para depuración
+            }
+
+            return 0;
+        }
+
+
+        private void ActualizarVisualMesa(PictureBox pb, int numeroMesa)
+        {
+            string estado = ObtenerEstadoMesa(numeroMesa);
+            Color colorFondo = estado == "ocupada" ? Color.Red : Color.Green;
+
+            pb.BackColor = colorFondo;
+            pb.Invalidate();
         }
 
         private void Mesa_MouseDown(object sender, MouseEventArgs e)
@@ -210,7 +270,7 @@ namespace Thor_Bar
             }
         }
 
-        // Métodos del menú
+        // Métodos del menú (si usás navegación por etiquetas)
         private void lblCocina_Click(object sender, EventArgs e)
         {
             if (this.MdiParent is FormMain main &&
@@ -221,19 +281,20 @@ namespace Thor_Bar
             }
             else
             {
-                MessageBox.Show("Usted no tiene los permisos para poder acceder a esta sección.");
+                MessageBox.Show("Usted no tiene los permisos para acceder a la cocina.");
             }
         }
 
         private void lblAdmin_Click(object sender, EventArgs e)
         {
-            if (this.MdiParent is FormMain main && SesionGlobal.UsuarioActual.rol == RolUsuario.Administrador)
+            if (this.MdiParent is FormMain main &&
+                SesionGlobal.UsuarioActual.rol == RolUsuario.Administrador)
             {
                 main.AbrirFormulario(new FormAdmin());
             }
             else
             {
-                MessageBox.Show("Usted no tiene los permisos para poder acceder a esta sección.");
+                MessageBox.Show("Acceso denegado al módulo de administración.");
             }
         }
 

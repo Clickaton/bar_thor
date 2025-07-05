@@ -7,48 +7,44 @@
       "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|c:\\users\\nuwanda\\source\\repos\\thor_bar\\thor_bar\\formadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|c:\\users\\nuwanda\\source\\repos\\thor_bar\\thor_bar\\estilosdatagrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\estilosdatagrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|c:\\users\\nuwanda\\source\\repos\\thor_bar\\thor_bar\\modificargasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\modificargasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|c:\\users\\nuwanda\\source\\repos\\thor_bar\\thor_bar\\agregargasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\agregargasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\formcocina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formcocina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\formpedidomesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formpedidomesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\sesionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\sesionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\formpedidomesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formpedidomesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\modificargasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\modificargasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\formcocina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formcocina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\formcocina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formcocina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\formadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\formpedidomesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formpedidomesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\formmesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formmesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\mesaposicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\mesaposicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\estilosdatagrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\estilosdatagrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\formmesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formmesas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\thor_bar\\mesaposicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\mesaposicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,33 +62,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SesionHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\SesionHelper.cs",
+              "RelativeDocumentMoniker": "Thor_Bar\\SesionHelper.cs",
+              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\SesionHelper.cs",
+              "RelativeToolTip": "Thor_Bar\\SesionHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T19:12:49.816Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EstilosDatagrid.cs",
-              "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\EstilosDatagrid.cs",
-              "RelativeDocumentMoniker": "Thor_Bar\\EstilosDatagrid.cs",
-              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\EstilosDatagrid.cs",
-              "RelativeToolTip": "Thor_Bar\\EstilosDatagrid.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T19:18:50.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormAdmin.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormAdmin.Designer.cs",
-              "RelativeDocumentMoniker": "Thor_Bar\\FormAdmin.Designer.cs",
-              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormAdmin.Designer.cs",
-              "RelativeToolTip": "Thor_Bar\\FormAdmin.Designer.cs",
-              "ViewState": "AgIAAEoBAAAAAAAAAAAAAC4CAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T16:19:02.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "ModificarGasto.cs",
               "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\ModificarGasto.cs",
               "RelativeDocumentMoniker": "Thor_Bar\\ModificarGasto.cs",
@@ -100,34 +82,7 @@
               "RelativeToolTip": "Thor_Bar\\ModificarGasto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T16:14:09.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AgregarGasto.cs",
-              "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\AgregarGasto.cs",
-              "RelativeDocumentMoniker": "Thor_Bar\\AgregarGasto.cs",
-              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\AgregarGasto.cs",
-              "RelativeToolTip": "Thor_Bar\\AgregarGasto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T16:11:09.687Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormAdmin.cs",
-              "RelativeDocumentMoniker": "Thor_Bar\\FormAdmin.cs",
-              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormAdmin.cs",
-              "RelativeToolTip": "Thor_Bar\\FormAdmin.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAcwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T15:57:45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-03T16:14:09.141Z"
             },
             {
               "$type": "Document",
@@ -143,37 +98,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MesaPosicion.cs",
-              "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\MesaPosicion.cs",
-              "RelativeDocumentMoniker": "Thor_Bar\\MesaPosicion.cs",
-              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\MesaPosicion.cs",
-              "RelativeToolTip": "Thor_Bar\\MesaPosicion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "FormAdmin.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormAdmin.Designer.cs",
+              "RelativeDocumentMoniker": "Thor_Bar\\FormAdmin.Designer.cs",
+              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormAdmin.Designer.cs",
+              "RelativeToolTip": "Thor_Bar\\FormAdmin.Designer.cs",
+              "ViewState": "AgIAAEoBAAAAAAAAAAAAAC4CAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T14:59:22.536Z"
+              "WhenOpened": "2025-07-03T16:19:02.68Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormMesas.cs",
-              "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormMesas.cs",
-              "RelativeDocumentMoniker": "Thor_Bar\\FormMesas.cs",
-              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormMesas.cs",
-              "RelativeToolTip": "Thor_Bar\\FormMesas.cs",
-              "ViewState": "AgIAAKEAAAAAAAAAAAAswAQBAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "FormCocina.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormCocina.cs",
+              "RelativeDocumentMoniker": "Thor_Bar\\FormCocina.cs",
+              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormCocina.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Thor_Bar\\FormCocina.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T14:30:30.205Z"
+              "WhenOpened": "2025-06-24T01:47:00.243Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "FormPedidoMesa.cs",
               "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormPedidoMesa.cs",
               "RelativeDocumentMoniker": "Thor_Bar\\FormPedidoMesa.cs",
               "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormPedidoMesa.cs",
               "RelativeToolTip": "Thor_Bar\\FormPedidoMesa.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAcwCEAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAawKEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T14:22:12.429Z"
             },
@@ -190,25 +144,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormCocina.cs [Dise\u00F1o]",
+              "DocumentIndex": 4,
+              "Title": "FormCocina.cs",
               "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormCocina.cs",
               "RelativeDocumentMoniker": "Thor_Bar\\FormCocina.cs",
-              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormCocina.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Thor_Bar\\FormCocina.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormCocina.cs",
+              "RelativeToolTip": "Thor_Bar\\FormCocina.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAQwGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T01:47:00.243Z"
+              "WhenOpened": "2025-07-05T17:51:06.445Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FormMesas.cs [Dise\u00F1o]",
+              "DocumentIndex": 8,
+              "Title": "FormMesas.cs",
               "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormMesas.cs",
               "RelativeDocumentMoniker": "Thor_Bar\\FormMesas.cs",
-              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormMesas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Thor_Bar\\FormMesas.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\FormMesas.cs",
+              "RelativeToolTip": "Thor_Bar\\FormMesas.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAQwJsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T02:11:16.643Z"
+              "WhenOpened": "2025-06-30T14:30:30.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EstilosDatagrid.cs",
+              "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\EstilosDatagrid.cs",
+              "RelativeDocumentMoniker": "Thor_Bar\\EstilosDatagrid.cs",
+              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\EstilosDatagrid.cs",
+              "RelativeToolTip": "Thor_Bar\\EstilosDatagrid.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T19:18:50.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MesaPosicion.cs",
+              "DocumentMoniker": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\MesaPosicion.cs",
+              "RelativeDocumentMoniker": "Thor_Bar\\MesaPosicion.cs",
+              "ToolTip": "C:\\Users\\Nuwanda\\source\\repos\\Thor_Bar\\Thor_Bar\\MesaPosicion.cs",
+              "RelativeToolTip": "Thor_Bar\\MesaPosicion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T14:59:22.536Z"
             }
           ]
         }
