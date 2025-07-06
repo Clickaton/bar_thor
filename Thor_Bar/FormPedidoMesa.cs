@@ -198,9 +198,11 @@ namespace Thor_Bar
             {
                 conn.Open();
 
-                var cerrarPedido = new SQLiteCommand("UPDATE pedidos SET estado = 'cerrado' WHERE id = @id", conn);
+                var cerrarPedido = new SQLiteCommand("DELETE FROM pedidos WHERE id = @id", conn);
                 cerrarPedido.Parameters.AddWithValue("@id", idPedido);
                 cerrarPedido.ExecuteNonQuery();
+           
+
 
                 var liberarMesa = new SQLiteCommand("UPDATE mesas SET estado = 'libre' WHERE numero = @numero", conn);
                 liberarMesa.Parameters.AddWithValue("@numero", mesaAsignada);
