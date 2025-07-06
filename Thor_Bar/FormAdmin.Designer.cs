@@ -674,7 +674,7 @@
             this.lblExit.AutoSize = true;
             this.lblExit.BackColor = System.Drawing.Color.LightGray;
             this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExit.Location = new System.Drawing.Point(1020, 87);
+            this.lblExit.Location = new System.Drawing.Point(1196, 87);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(51, 24);
             this.lblExit.TabIndex = 48;
@@ -685,7 +685,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 716);
+            this.ClientSize = new System.Drawing.Size(1305, 716);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.lblNombreUsuario);
             this.Controls.Add(this.pictureBox5);

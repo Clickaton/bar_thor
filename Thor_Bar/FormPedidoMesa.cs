@@ -202,8 +202,16 @@ namespace Thor_Bar
                 liberarMesa.ExecuteNonQuery();
 
                 MessageBox.Show("🧾 Pedido cerrado y mesa liberada.", "Cierre exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //generarComprobante();
+
                 this.Close();
             }
+        }
+
+        public void GenerarComprobante()
+        {
+
         }
 
         private void DgvProductos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
