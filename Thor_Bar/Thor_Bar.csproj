@@ -118,8 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgregarGasto.cs" />
+<<<<<<< HEAD
+    <Compile Include="Comprobantes.cs" />
+=======
     <Compile Include="Clases\Caja.cs" />
     <Compile Include="Clases\DetallePedido.cs" />
+>>>>>>> 9644f9f087ce6ec3dc5d3e43f0ac9d6e61eaba65
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="EliminarGasto.cs" />
     <Compile Include="EstilosDatagrid.cs" />
