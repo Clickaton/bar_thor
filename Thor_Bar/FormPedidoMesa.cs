@@ -94,7 +94,7 @@ namespace Thor_Bar
             using (var conn = new SQLiteConnection("Data Source=thor_bar.sqlite"))
             {
                 conn.Open();
-                string query = "SELECT id, nombre, stock FROM productos";
+                string query = "SELECT id, nombre, stock, precio FROM productos";
 
                 using (var adapter = new SQLiteDataAdapter(query, conn))
                 {
@@ -108,6 +108,7 @@ namespace Thor_Bar
                     dgvProductos.Columns["nombre"].ReadOnly = true;
                     dgvProductos.Columns["stock"].ReadOnly = true;
                     dgvProductos.Columns["cantidad"].ReadOnly = false;
+                    dgvProductos.Columns["precio"].ReadOnly = true;
                 }
             }
 
@@ -115,6 +116,7 @@ namespace Thor_Bar
             dgvProductos.Columns["nombre"].HeaderText = "Producto";
             dgvProductos.Columns["stock"].HeaderText = "Stock";
             dgvProductos.Columns["cantidad"].HeaderText = "Cantidad";
+            dgvProductos.Columns["precio"].HeaderText = "Precio";
         }
 
         private void CargarPedidoExistente()
@@ -123,7 +125,7 @@ namespace Thor_Bar
             {
                 conn.Open();
                 string query = @"
-                    SELECT p.id, p.nombre, p.stock, d.cantidad 
+                    SELECT p.id, p.nombre, p.stock, d.cantidad, p.precio 
                     FROM detalles_pedido d
                     JOIN productos p ON d.producto_id = p.id
                     WHERE d.pedido_id = @id";
@@ -140,10 +142,13 @@ namespace Thor_Bar
                         dgvProductos.Columns["nombre"].HeaderText = "Producto";
                         dgvProductos.Columns["stock"].HeaderText = "Stock";
                         dgvProductos.Columns["cantidad"].HeaderText = "Cantidad";
+                        dgvProductos.Columns["precio"].HeaderText = "Precio";
 
                         dgvProductos.Columns["nombre"].ReadOnly = true;
                         dgvProductos.Columns["stock"].ReadOnly = true;
                         dgvProductos.Columns["cantidad"].ReadOnly = true;
+                        dgvProductos.Columns["precio"].ReadOnly = true;
+
                     }
                 }
             }
