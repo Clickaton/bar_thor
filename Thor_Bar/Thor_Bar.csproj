@@ -118,6 +118,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgregarGasto.cs" />
+    <Compile Include="Clases\Caja.cs" />
+    <Compile Include="Clases\DetallePedido.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="EliminarGasto.cs" />
     <Compile Include="EstilosDatagrid.cs" />
@@ -169,6 +171,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RolUsuario.cs" />
+    <Compile Include="Service\cajaService.cs" />
     <Compile Include="SesionGlobal.cs" />
     <Compile Include="SesionHelper.cs" />
     <Compile Include="Usuario.cs" />
