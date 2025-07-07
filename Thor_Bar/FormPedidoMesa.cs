@@ -274,6 +274,21 @@ namespace Thor_Bar
 
         private void BtnConfirmar_Click(object sender, EventArgs e)
         {
+            // Convertir lblTotal.Text a decimal y validarlo
+            decimal total = 0;
+            if (!decimal.TryParse(lblTotal.Text.Replace("Total: $", "").Trim(), out total))
+            {
+                MessageBox.Show("🚫 El total es inválido. Intenta agregar productos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (total <= 0)
+            {
+                MessageBox.Show("🚫 El total del pedido no puede ser cero o negativo. Por favor, agregue productos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Detener la ejecución si el total es inválido
+            }
+
+            // El resto del código sigue igual
             using (var conn = new SQLiteConnection("Data Source=thor_bar.sqlite"))
             {
                 conn.Open();
@@ -329,6 +344,7 @@ namespace Thor_Bar
                 }
             }
         }
+
 
         // --- INICIO: Modificado para generar comprobante y validar estado ---
         private void BtnCerrarPedido_Click(object sender, EventArgs e)
