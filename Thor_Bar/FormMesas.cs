@@ -117,7 +117,7 @@ namespace Thor_Bar
                     string query = @"
                 SELECT id, estado FROM pedidos 
                 WHERE mesa = @mesa AND 
-                (estado IS NULL OR estado = '' OR LOWER(estado) = 'abierto') 
+                (estado IS NULL OR estado = '' OR LOWER(estado) = 'abierto' OR LOWER(estado) = 'listo')
                 ORDER BY id DESC LIMIT 1";
 
                     using (var cmd = new SQLiteCommand(query, conn))
