@@ -16,8 +16,6 @@ namespace Thor_Bar
         private Label lblTotal;
         private Label lblEstadoPedido;
 
-
-
         // --- INICIO: Agregado para la comunicación con FormAdmin ---
         // Define un delegado para el evento
         public delegate void PedidoCerradoEventHandler(object sender, EventArgs e);
@@ -25,7 +23,6 @@ namespace Thor_Bar
         // Declara el evento
         public event PedidoCerradoEventHandler PedidoCerrado;
         // --- FIN: Agregado para la comunicación con FormAdmin ---
-
 
         public FormPedidoMesa(int numeroMesa)
         {
@@ -333,9 +330,17 @@ namespace Thor_Bar
             }
         }
 
-        // --- INICIO: Modificado para generar comprobante ---
+        // --- INICIO: Modificado para generar comprobante y validar estado ---
         private void BtnCerrarPedido_Click(object sender, EventArgs e)
         {
+            string currentStatus = GetOrderStatus(idPedido);
+
+            if (currentStatus.ToLower() != "listo")
+            {
+                MessageBox.Show("🚫 El pedido no se puede cerrar porque su estado no es 'LISTO'.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Detiene la ejecución si el estado no es "listo"
+            }
+
             using (var conn = new SQLiteConnection("Data Source=thor_bar.sqlite"))
             {
                 conn.Open();
@@ -413,7 +418,7 @@ namespace Thor_Bar
             }
             return sb.ToString();
         }
-        // --- FIN: Modificado para generar comprobante ---
+        // --- FIN: Modificado para generar comprobante y validar estado ---
 
         private void DgvProductos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {

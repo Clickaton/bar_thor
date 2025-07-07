@@ -825,12 +825,19 @@ namespace Thor_Bar
 
             if (dgvComprobantes != null && dgvComprobantes.SelectedRows.Count > 0)
             {
-                // CAMBIO CRÍTICO AQUÍ: Ahora busca la columna "ID Pedido" (con espacio)
-                int idComprobante = Convert.ToInt32(dgvComprobantes.SelectedRows[0].Cells["pedido_id"].Value);
+                // ✅ Usamos el ID real de la tabla comprobantes (columna 'id')
+                int idComprobante = Convert.ToInt32(dgvComprobantes.SelectedRows[0].Cells["id"].Value);
+
 
                 string detallesTexto = rtbDetallesComprobante.Text;
+
                 DataTable productosComprobante = ObtenerDetallesProductosDeComprobante(idComprobante);
-                string totalTexto = "Total: $" + ObtenerTotalDeComprobante(idComprobante).ToString("N2");
+
+                // ✅ Obtenemos el total usando el ID correcto
+                decimal totalDecimal = ObtenerTotalDeComprobante(idComprobante);
+
+
+                string totalTexto = "Total: $" + totalDecimal.ToString("N2");
 
                 using (SaveFileDialog sfd = new SaveFileDialog())
                 {
@@ -849,5 +856,6 @@ namespace Thor_Bar
                 MessageBox.Show("Por favor, selecciona un comprobante para generar la factura.", "Sin Comprobante Seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        }
+
     }
+}

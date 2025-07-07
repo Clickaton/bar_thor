@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Data;
 using System.Data.SQLite;
-using System.Windows.Forms; // Necesario para el DataGridView
-
-namespace Thor_Bar.Managers // O la carpeta donde la hayas ubicado
+using System.Windows.Forms; 
+namespace Thor_Bar.Managers 
 {
     public class GenerarComprobante
     {
         private DataGridView _dgvComprobantes;
         private RichTextBox _rtbDetallesComprobante;
-
-        /// <summary>
-        /// Constructor que recibe las referencias a los controles DataGridView y RichTextBox.
-        /// </summary>
         /// <param name="dgv">El DataGridView donde se mostrarán los comprobantes.</param>
         /// <param name="rtb">El RichTextBox donde se mostrarán los detalles del comprobante.</param>
         public GenerarComprobante(DataGridView dgv, RichTextBox rtb)
@@ -36,18 +31,10 @@ namespace Thor_Bar.Managers // O la carpeta donde la hayas ubicado
             _rtbDetallesComprobante.BackColor = System.Drawing.Color.LightYellow;
         }
 
-        /// <summary>
-        /// Carga los datos de los comprobantes desde la base de datos y los muestra en el DataGridView.
-        /// </summary>
         public void CargarComprobantes()
         {
             try
             {
-                // Usamos la clase DatabaseConnection con el bloque 'using' para asegurar el cierre.
-                // Nota: Aquí se usa directamente SQLiteConnection con 'using', que ya implementa IDisposable.
-                // Esto es una buena práctica y significa que la conexión se cerrará automáticamente.
-                // Si tu DatabaseConnection fuera a manejar pools de conexiones o lógica más compleja,
-                // la usaríamos aquí con 'using (var db = new DatabaseConnection()) { ... db.GetConnection() ... }'
                 using (var conn = new SQLiteConnection("Data Source=thor_bar.sqlite"))
                 {
                     conn.Open();
@@ -58,7 +45,6 @@ namespace Thor_Bar.Managers // O la carpeta donde la hayas ubicado
                         adapter.Fill(comprobantesTable);
                         _dgvComprobantes.DataSource = comprobantesTable;
 
-                        // Configurar encabezados de columna y visibilidad
                         if (_dgvComprobantes.Columns.Contains("id"))
                             _dgvComprobantes.Columns["id"].Visible = false;
 
@@ -88,10 +74,6 @@ namespace Thor_Bar.Managers // O la carpeta donde la hayas ubicado
             }
         }
 
-        /// <summary>
-        /// Maneja el evento de cambio de selección en el DataGridView de comprobantes,
-        /// mostrando los detalles en el RichTextBox.
-        /// </summary>
         private void DgvComprobantes_SelectionChanged(object sender, EventArgs e)
         {
             if (_dgvComprobantes.CurrentRow != null)
