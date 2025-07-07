@@ -50,12 +50,12 @@ namespace Thor_Bar
                 db.OpenConnection();
 
                 string query = @"
-            SELECT p.id AS PedidoId, p.mesa, pr.nombre AS Producto, dp.cantidad
-            FROM pedidos p
-            JOIN detalles_pedido dp ON p.id = dp.pedido_id
-            JOIN productos pr ON pr.id = dp.producto_id
-            WHERE LOWER(p.estado) = 'abierto'
-            ORDER BY p.id DESC";
+                SELECT p.id AS PedidoId, p.mesa, pr.nombre AS Producto, dp.cantidad
+                FROM pedidos p
+                JOIN detalles_pedido dp ON p.id = dp.pedido_id
+                JOIN productos pr ON pr.id = dp.producto_id
+                WHERE LOWER(p.estado) = 'abierto'
+                ORDER BY p.id DESC";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, db.GetConnection());
                 SQLiteDataReader reader = cmd.ExecuteReader();
@@ -95,7 +95,6 @@ namespace Thor_Bar
             return lista;
         }
 
-
         private void MostrarPedidosAgrupados(List<PedidoAgrupado> pedidos)
         {
             flpPedidos.Controls.Clear();
@@ -104,7 +103,7 @@ namespace Thor_Bar
             {
                 Panel tarjeta = new Panel();
                 tarjeta.Width = 220;
-                tarjeta.Height = 150;
+                tarjeta.Height = 180;
                 tarjeta.BackColor = Color.AntiqueWhite;
                 tarjeta.Margin = new Padding(10);
                 tarjeta.BorderStyle = BorderStyle.FixedSingle;
@@ -129,9 +128,45 @@ namespace Thor_Bar
                 }
                 lblDetalle.Text = string.Join(Environment.NewLine, lineas);
 
+                Button btnListo = new Button();
+                btnListo.Text = "✅ Listo";
+                btnListo.Dock = DockStyle.Bottom;
+                btnListo.Height = 30;
+                btnListo.Tag = pedido.PedidoId;
+                btnListo.Click += BtnListo_Click;
+
+                tarjeta.Controls.Add(btnListo);
                 tarjeta.Controls.Add(lblDetalle);
                 tarjeta.Controls.Add(lblCabecera);
                 flpPedidos.Controls.Add(tarjeta);
+            }
+        }
+
+        private void BtnListo_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null && btn.Tag is int pedidoId)
+            {
+                try
+                {
+                    DatabaseConnection db = new DatabaseConnection();
+                    db.OpenConnection();
+
+                    string updateQuery = "UPDATE pedidos SET estado = 'listo' WHERE id = @id";
+                    SQLiteCommand cmd = new SQLiteCommand(updateQuery, db.GetConnection());
+                    cmd.Parameters.AddWithValue("@id", pedidoId);
+                    cmd.ExecuteNonQuery();
+
+                    db.CloseConnection();
+
+                    MessageBox.Show($"Pedido #{pedidoId} marcado como listo.");
+                    List<PedidoAgrupado> pedidos = ObtenerPedidosAgrupados();
+                    MostrarPedidosAgrupados(pedidos);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al actualizar el estado del pedido: " + ex.Message);
+                }
             }
         }
 
@@ -164,7 +199,7 @@ namespace Thor_Bar
 
         private void lblExit_Click(object sender, EventArgs e)
         {
-            SesionHelper.CerrarSesion(this.MdiParent); 
+            SesionHelper.CerrarSesion(this.MdiParent);
         }
     }
 }
