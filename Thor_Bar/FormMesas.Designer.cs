@@ -83,7 +83,7 @@
             this.lblCocina.BackColor = System.Drawing.Color.LightGray;
             this.lblCocina.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCocina.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCocina.Location = new System.Drawing.Point(451, 97);
+            this.lblCocina.Location = new System.Drawing.Point(550, 97);
             this.lblCocina.Name = "lblCocina";
             this.lblCocina.Size = new System.Drawing.Size(75, 24);
             this.lblCocina.TabIndex = 5;
@@ -96,7 +96,7 @@
             this.lblMesas.BackColor = System.Drawing.Color.LightGray;
             this.lblMesas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMesas.Location = new System.Drawing.Point(532, 97);
+            this.lblMesas.Location = new System.Drawing.Point(631, 97);
             this.lblMesas.Name = "lblMesas";
             this.lblMesas.Size = new System.Drawing.Size(70, 24);
             this.lblMesas.TabIndex = 6;
@@ -109,7 +109,7 @@
             this.lblStock.BackColor = System.Drawing.Color.LightGray;
             this.lblStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(613, 97);
+            this.lblStock.Location = new System.Drawing.Point(712, 97);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(61, 24);
             this.lblStock.TabIndex = 7;
@@ -122,7 +122,7 @@
             this.lblAdmin.BackColor = System.Drawing.Color.LightGray;
             this.lblAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmin.Location = new System.Drawing.Point(680, 97);
+            this.lblAdmin.Location = new System.Drawing.Point(779, 97);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(148, 24);
             this.lblAdmin.TabIndex = 8;
@@ -133,7 +133,7 @@
             // 
             this.pbMesa12.BackColor = System.Drawing.Color.LimeGreen;
             this.pbMesa12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMesa12.Location = new System.Drawing.Point(291, 478);
+            this.pbMesa12.Location = new System.Drawing.Point(381, 478);
             this.pbMesa12.Name = "pbMesa12";
             this.pbMesa12.Size = new System.Drawing.Size(110, 109);
             this.pbMesa12.TabIndex = 24;
@@ -143,7 +143,7 @@
             // 
             this.pbMesa5.BackColor = System.Drawing.Color.LimeGreen;
             this.pbMesa5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMesa5.Location = new System.Drawing.Point(291, 319);
+            this.pbMesa5.Location = new System.Drawing.Point(381, 319);
             this.pbMesa5.Name = "pbMesa5";
             this.pbMesa5.Size = new System.Drawing.Size(110, 109);
             this.pbMesa5.TabIndex = 23;
@@ -152,7 +152,7 @@
             // pbMesa15
             // 
             this.pbMesa15.BackColor = System.Drawing.Color.LimeGreen;
-            this.pbMesa15.Location = new System.Drawing.Point(838, 593);
+            this.pbMesa15.Location = new System.Drawing.Point(928, 593);
             this.pbMesa15.Name = "pbMesa15";
             this.pbMesa15.Size = new System.Drawing.Size(135, 84);
             this.pbMesa15.TabIndex = 22;
@@ -162,7 +162,7 @@
             // 
             this.pbMesa11.BackColor = System.Drawing.Color.LimeGreen;
             this.pbMesa11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMesa11.Location = new System.Drawing.Point(838, 463);
+            this.pbMesa11.Location = new System.Drawing.Point(928, 463);
             this.pbMesa11.Name = "pbMesa11";
             this.pbMesa11.Size = new System.Drawing.Size(135, 84);
             this.pbMesa11.TabIndex = 21;
@@ -172,7 +172,7 @@
             // 
             this.pbMesa8.BackColor = System.Drawing.Color.LimeGreen;
             this.pbMesa8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMesa8.Location = new System.Drawing.Point(838, 319);
+            this.pbMesa8.Location = new System.Drawing.Point(928, 319);
             this.pbMesa8.Name = "pbMesa8";
             this.pbMesa8.Size = new System.Drawing.Size(135, 84);
             this.pbMesa8.TabIndex = 20;
@@ -181,7 +181,7 @@
             // pbMesa14
             // 
             this.pbMesa14.BackColor = System.Drawing.Color.LimeGreen;
-            this.pbMesa14.Location = new System.Drawing.Point(653, 593);
+            this.pbMesa14.Location = new System.Drawing.Point(743, 593);
             this.pbMesa14.Name = "pbMesa14";
             this.pbMesa14.Size = new System.Drawing.Size(135, 84);
             this.pbMesa14.TabIndex = 19;
@@ -191,7 +191,7 @@
             // 
             this.pbMesa10.BackColor = System.Drawing.Color.LimeGreen;
             this.pbMesa10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMesa10.Location = new System.Drawing.Point(653, 463);
+            this.pbMesa10.Location = new System.Drawing.Point(743, 463);
             this.pbMesa10.Name = "pbMesa10";
             this.pbMesa10.Size = new System.Drawing.Size(135, 84);
             this.pbMesa10.TabIndex = 18;
@@ -201,7 +201,7 @@
             // 
             this.pbMesa7.BackColor = System.Drawing.Color.LimeGreen;
             this.pbMesa7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMesa7.Location = new System.Drawing.Point(653, 319);
+            this.pbMesa7.Location = new System.Drawing.Point(743, 319);
             this.pbMesa7.Name = "pbMesa7";
             this.pbMesa7.Size = new System.Drawing.Size(135, 84);
             this.pbMesa7.TabIndex = 17;
@@ -210,7 +210,7 @@
             // pbMesa13
             // 
             this.pbMesa13.BackColor = System.Drawing.Color.LimeGreen;
-            this.pbMesa13.Location = new System.Drawing.Point(470, 593);
+            this.pbMesa13.Location = new System.Drawing.Point(560, 593);
             this.pbMesa13.Name = "pbMesa13";
             this.pbMesa13.Size = new System.Drawing.Size(135, 84);
             this.pbMesa13.TabIndex = 16;
@@ -219,7 +219,7 @@
             // pbMesa9
             // 
             this.pbMesa9.BackColor = System.Drawing.Color.LimeGreen;
-            this.pbMesa9.Location = new System.Drawing.Point(470, 463);
+            this.pbMesa9.Location = new System.Drawing.Point(560, 463);
             this.pbMesa9.Name = "pbMesa9";
             this.pbMesa9.Size = new System.Drawing.Size(135, 84);
             this.pbMesa9.TabIndex = 15;
@@ -229,7 +229,7 @@
             // 
             this.pbMesa6.BackColor = System.Drawing.Color.LimeGreen;
             this.pbMesa6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMesa6.Location = new System.Drawing.Point(470, 319);
+            this.pbMesa6.Location = new System.Drawing.Point(560, 319);
             this.pbMesa6.Name = "pbMesa6";
             this.pbMesa6.Size = new System.Drawing.Size(135, 84);
             this.pbMesa6.TabIndex = 14;
@@ -239,7 +239,7 @@
             // 
             this.pbMesa4.BackColor = System.Drawing.Color.LimeGreen;
             this.pbMesa4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMesa4.Location = new System.Drawing.Point(855, 154);
+            this.pbMesa4.Location = new System.Drawing.Point(954, 154);
             this.pbMesa4.Name = "pbMesa4";
             this.pbMesa4.Size = new System.Drawing.Size(101, 109);
             this.pbMesa4.TabIndex = 13;
@@ -249,7 +249,7 @@
             // 
             this.pbMesa1.BackColor = System.Drawing.Color.LimeGreen;
             this.pbMesa1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMesa1.Location = new System.Drawing.Point(291, 154);
+            this.pbMesa1.Location = new System.Drawing.Point(390, 154);
             this.pbMesa1.Name = "pbMesa1";
             this.pbMesa1.Size = new System.Drawing.Size(110, 109);
             this.pbMesa1.TabIndex = 12;
@@ -259,7 +259,7 @@
             // pbMesa3
             // 
             this.pbMesa3.BackColor = System.Drawing.Color.LimeGreen;
-            this.pbMesa3.Location = new System.Drawing.Point(672, 154);
+            this.pbMesa3.Location = new System.Drawing.Point(771, 154);
             this.pbMesa3.Name = "pbMesa3";
             this.pbMesa3.Size = new System.Drawing.Size(101, 109);
             this.pbMesa3.TabIndex = 11;
@@ -268,7 +268,7 @@
             // pbMesa2
             // 
             this.pbMesa2.BackColor = System.Drawing.Color.LimeGreen;
-            this.pbMesa2.Location = new System.Drawing.Point(488, 154);
+            this.pbMesa2.Location = new System.Drawing.Point(587, 154);
             this.pbMesa2.Name = "pbMesa2";
             this.pbMesa2.Size = new System.Drawing.Size(101, 109);
             this.pbMesa2.TabIndex = 10;
@@ -277,9 +277,9 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox3.Location = new System.Drawing.Point(-1, 86);
+            this.pictureBox3.Location = new System.Drawing.Point(-1, 80);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1272, 54);
+            this.pictureBox3.Size = new System.Drawing.Size(1452, 54);
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
@@ -287,9 +287,9 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 49);
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 53);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1272, 31);
+            this.pictureBox2.Size = new System.Drawing.Size(1452, 31);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -299,7 +299,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.DarkOrange;
             this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1272, 59);
+            this.pictureBox1.Size = new System.Drawing.Size(1452, 59);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -319,7 +319,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.DarkOrange;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1171, 8);
+            this.pictureBox5.Location = new System.Drawing.Point(1321, 12);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 34);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -343,7 +343,7 @@
             this.lblExit.AutoSize = true;
             this.lblExit.BackColor = System.Drawing.Color.LightGray;
             this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExit.Location = new System.Drawing.Point(1059, 97);
+            this.lblExit.Location = new System.Drawing.Point(1317, 97);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(51, 24);
             this.lblExit.TabIndex = 45;
@@ -354,7 +354,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 716);
+            this.ClientSize = new System.Drawing.Size(1444, 729);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.lblNombreUsuario);
             this.Controls.Add(this.pictureBox5);

@@ -40,6 +40,7 @@
             this.IsMdiContainer = true;
             this.Name = "FormMain";
             this.Text = "Main";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
 
