@@ -200,14 +200,11 @@ namespace Thor_Bar
         private void lblExit_Click(object sender, EventArgs e)
         {
             SesionHelper.CerrarSesion(this.MdiParent);
-<<<<<<< HEAD
-=======
         }
 
         private void lblCocina_Click(object sender, EventArgs e)
         {
 
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
         }
     }
 }

@@ -28,15 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-=======
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -123,12 +117,9 @@
             this.tabUsers.SuspendLayout();
             this.tabGastos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).BeginInit();
-<<<<<<< HEAD
-=======
             this.tabCaja.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.tabComprobantes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComprobantes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -217,13 +208,8 @@
             // 
             // dgvUsuarios
             // 
-<<<<<<< HEAD
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            this.dgvUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-=======
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
             this.dgvUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(236, 105);
@@ -245,22 +231,14 @@
             // 
             // txtAddUser
             // 
-<<<<<<< HEAD
-            this.txtAddUser.Location = new System.Drawing.Point(212, 443);
-=======
             this.txtAddUser.Location = new System.Drawing.Point(320, 443);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.txtAddUser.Name = "txtAddUser";
             this.txtAddUser.Size = new System.Drawing.Size(141, 26);
             this.txtAddUser.TabIndex = 16;
             // 
             // txtAddPass
             // 
-<<<<<<< HEAD
-            this.txtAddPass.Location = new System.Drawing.Point(391, 443);
-=======
             this.txtAddPass.Location = new System.Drawing.Point(499, 443);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.txtAddPass.Name = "txtAddPass";
             this.txtAddPass.Size = new System.Drawing.Size(142, 26);
             this.txtAddPass.TabIndex = 17;
@@ -269,11 +247,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.lblName.Location = new System.Drawing.Point(208, 412);
-=======
             this.lblName.Location = new System.Drawing.Point(316, 412);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(71, 20);
             this.lblName.TabIndex = 18;
@@ -284,11 +258,7 @@
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.lblPass.Location = new System.Drawing.Point(387, 412);
-=======
             this.lblPass.Location = new System.Drawing.Point(495, 412);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(53, 20);
             this.lblPass.TabIndex = 19;
@@ -423,11 +393,7 @@
             // 
             // txtApellido
             // 
-<<<<<<< HEAD
-            this.txtApellido.Location = new System.Drawing.Point(391, 379);
-=======
             this.txtApellido.Location = new System.Drawing.Point(499, 379);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(142, 26);
@@ -435,11 +401,7 @@
             // 
             // txtNombre
             // 
-<<<<<<< HEAD
-            this.txtNombre.Location = new System.Drawing.Point(211, 379);
-=======
             this.txtNombre.Location = new System.Drawing.Point(319, 379);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(142, 26);
@@ -489,11 +451,7 @@
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.lblApellido.Location = new System.Drawing.Point(387, 348);
-=======
             this.lblApellido.Location = new System.Drawing.Point(495, 348);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(73, 20);
             this.lblApellido.TabIndex = 19;
@@ -503,11 +461,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.lblNombre.Location = new System.Drawing.Point(207, 348);
-=======
             this.lblNombre.Location = new System.Drawing.Point(315, 348);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(71, 20);
             this.lblNombre.TabIndex = 19;
@@ -901,11 +855,7 @@
             // btnGenerarPdf
             // 
             this.btnGenerarPdf.ForeColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
-            this.btnGenerarPdf.Location = new System.Drawing.Point(874, 402);
-=======
             this.btnGenerarPdf.Location = new System.Drawing.Point(969, 402);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.btnGenerarPdf.Name = "btnGenerarPdf";
             this.btnGenerarPdf.Size = new System.Drawing.Size(138, 64);
             this.btnGenerarPdf.TabIndex = 4;
@@ -917,11 +867,7 @@
             // 
             this.lblComprobanteDesc.AutoSize = true;
             this.lblComprobanteDesc.ForeColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
-            this.lblComprobanteDesc.Location = new System.Drawing.Point(574, 328);
-=======
             this.lblComprobanteDesc.Location = new System.Drawing.Point(665, 328);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.lblComprobanteDesc.Name = "lblComprobanteDesc";
             this.lblComprobanteDesc.Size = new System.Drawing.Size(103, 20);
             this.lblComprobanteDesc.TabIndex = 3;
@@ -931,11 +877,7 @@
             // 
             this.lblComprobanteTitle.AutoSize = true;
             this.lblComprobanteTitle.ForeColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
-            this.lblComprobanteTitle.Location = new System.Drawing.Point(574, 46);
-=======
             this.lblComprobanteTitle.Location = new System.Drawing.Point(665, 46);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.lblComprobanteTitle.Name = "lblComprobanteTitle";
             this.lblComprobanteTitle.Size = new System.Drawing.Size(117, 20);
             this.lblComprobanteTitle.TabIndex = 2;
@@ -944,11 +886,7 @@
             // rtbDetallesComprobante
             // 
             this.rtbDetallesComprobante.BackColor = System.Drawing.Color.Silver;
-<<<<<<< HEAD
-            this.rtbDetallesComprobante.Location = new System.Drawing.Point(423, 362);
-=======
             this.rtbDetallesComprobante.Location = new System.Drawing.Point(514, 362);
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.rtbDetallesComprobante.Name = "rtbDetallesComprobante";
             this.rtbDetallesComprobante.Size = new System.Drawing.Size(418, 104);
             this.rtbDetallesComprobante.TabIndex = 1;
@@ -958,22 +896,6 @@
             // dgvComprobantes
             // 
             this.dgvComprobantes.BackgroundColor = System.Drawing.Color.Silver;
-<<<<<<< HEAD
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Chartreuse;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvComprobantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvComprobantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvComprobantes.EnableHeadersVisualStyles = false;
-            this.dgvComprobantes.Location = new System.Drawing.Point(423, 79);
-            this.dgvComprobantes.Name = "dgvComprobantes";
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.dgvComprobantes.RowsDefaultCellStyle = dataGridViewCellStyle6;
-=======
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -988,7 +910,6 @@
             this.dgvComprobantes.Name = "dgvComprobantes";
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             this.dgvComprobantes.RowsDefaultCellStyle = dataGridViewCellStyle3;
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.dgvComprobantes.Size = new System.Drawing.Size(418, 220);
             this.dgvComprobantes.TabIndex = 0;
             // 
@@ -1080,13 +1001,10 @@
             this.tabGastos.ResumeLayout(false);
             this.tabGastos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGastos)).EndInit();
-<<<<<<< HEAD
-=======
             this.tabCaja.ResumeLayout(false);
             this.tabCaja.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             this.tabComprobantes.ResumeLayout(false);
             this.tabComprobantes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComprobantes)).EndInit();
@@ -1160,8 +1078,6 @@
         private System.Windows.Forms.Label lblComprobanteTitle;
         private System.Windows.Forms.Label lblComprobanteDesc;
         private System.Windows.Forms.Button btnGenerarPdf;
-<<<<<<< HEAD
-=======
         private System.Windows.Forms.Label lblValorTotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -1179,6 +1095,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
     }
 }

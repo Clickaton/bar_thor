@@ -228,8 +228,6 @@ C:\Users\Nuwanda\Desktop\Thor Bar\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.exe
 C:\Users\Nuwanda\Desktop\Thor Bar\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.pdb
 C:\Users\Nuwanda\Desktop\Thor Bar\bar_thor\Thor_Bar\bin\Debug\itextsharp.dll
 C:\Users\Nuwanda\Desktop\Thor Bar\bar_thor\Thor_Bar\bin\Debug\itextsharp.xml
-<<<<<<< HEAD
-=======
 C:\Users\Usuario\Documents\GitHub\bar_thor\Thor_Bar\bin\Debug\Thor_Bar.exe.config
 C:\Users\Usuario\Documents\GitHub\bar_thor\Thor_Bar\bin\Debug\Thor_Bar.exe
 C:\Users\Usuario\Documents\GitHub\bar_thor\Thor_Bar\bin\Debug\Thor_Bar.pdb
@@ -289,17 +287,3 @@ C:\Users\Usuario\Documents\GitHub\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.csproj.Co
 C:\Users\Usuario\Documents\GitHub\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.csproj.Up2Date
 C:\Users\Usuario\Documents\GitHub\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.exe
 C:\Users\Usuario\Documents\GitHub\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.pdb
->>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.csproj.AssemblyReference.cache
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.FormAdmin.resources
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.FormCocina.resources
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.FormLogin.resources
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.FormMain.resources
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.FormMesas.resources
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.FormPedidoMesa.resources
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.FormStock.resources
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.Properties.Resources.resources
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.csproj.GenerateResource.cache
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.csproj.CoreCompileInputs.cache
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.exe
-C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.pdb
