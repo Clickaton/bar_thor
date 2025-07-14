@@ -63,6 +63,8 @@ namespace Thor_Bar
             // Cargar enum RolUsuario en el ComboBox
             cmbRol.DataSource = Enum.GetValues(typeof(RolUsuario));
             VerificarYAgregarColumnas();
+            lblValorTotal.Text = consultaComprobantesDelDia().ToString();
+            lblFechaActual.Text = DateTime.Now.ToString("dd/MM/yyyy");
             List<Usuario> usuarios = ObtenerUsuarios();
             CargarUsuariosEnGrid(usuarios);
             EstilizarDataGridView();
@@ -175,6 +177,49 @@ namespace Thor_Bar
             }
 
             return usuarios;
+        }
+
+        private string consultaComprobantesDelDia()
+        {
+            string totalVentasDia = "";
+            try
+            {
+                DateTime fechaInicio = DateTime.Today;
+                DateTime fechaFin = fechaInicio.AddDays(1);
+
+                DatabaseConnection db = new DatabaseConnection();
+                db.OpenConnection();
+
+                string query = @"
+                 SELECT SUM(c.total_pedido) AS total_dia
+                 FROM comprobantes c
+                 WHERE c.fecha_hora_cierre >= @fechaInicio
+                 AND c.fecha_hora_cierre < @fechaFin;
+                 ";
+
+                SQLiteCommand cmd = new SQLiteCommand(query, db.GetConnection());
+                cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio.ToString("yyyy-MM-dd HH:mm:ss"));
+                cmd.Parameters.AddWithValue("@fechaFin", fechaFin.ToString("yyyy-MM-dd HH:mm:ss"));
+
+                object resultado = cmd.ExecuteScalar();
+                decimal total = 0;
+
+                if (resultado != DBNull.Value && resultado != null)
+                {
+                    total = Convert.ToDecimal(resultado);
+                    totalVentasDia = '$' + total.ToString();
+                }
+
+                db.CloseConnection();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar comprobantes del día: " + ex.Message);
+            }
+
+            return totalVentasDia;
         }
 
         private void CargarUsuariosEnGrid(List<Usuario> usuarios)

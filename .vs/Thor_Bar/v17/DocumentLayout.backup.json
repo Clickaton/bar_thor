@@ -5,6 +5,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|c:\\users\\nuwanda\\desktop\\thor bar\\bar_thor\\thor_bar\\formpedidomesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\formpedidomesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+<<<<<<< HEAD
     },
     {
       "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\Desktop\\Thor Bar\\bar_thor\\thor_bar\\formpedidomesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -25,6 +26,8 @@
     {
       "AbsoluteMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|C:\\Users\\Nuwanda\\Desktop\\Thor Bar\\bar_thor\\thor_bar\\generarcomprobante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E27305F1-91CD-4678-AE1C-E0829404F115}|Thor_Bar\\Thor_Bar.csproj|solutionrelative:thor_bar\\generarcomprobante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+>>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +37,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 2,
+=======
+          "SelectedChildIndex": 1,
+>>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,6 +49,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 2,
               "Title": "FormCocina.cs",
               "DocumentMoniker": "C:\\Users\\Nuwanda\\Desktop\\Thor Bar\\bar_thor\\Thor_Bar\\FormCocina.cs",
@@ -54,12 +62,15 @@
             },
             {
               "$type": "Document",
+=======
+>>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
               "DocumentIndex": 0,
               "Title": "FormPedidoMesa.cs",
               "DocumentMoniker": "C:\\Users\\Nuwanda\\Desktop\\Thor Bar\\bar_thor\\Thor_Bar\\FormPedidoMesa.cs",
               "RelativeDocumentMoniker": "Thor_Bar\\FormPedidoMesa.cs",
               "ToolTip": "C:\\Users\\Nuwanda\\Desktop\\Thor Bar\\bar_thor\\Thor_Bar\\FormPedidoMesa.cs",
               "RelativeToolTip": "Thor_Bar\\FormPedidoMesa.cs",
+<<<<<<< HEAD
               "ViewState": "AgIAAEEBAAAAAAAAAAAQwFoBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T12:13:49.343Z",
@@ -111,6 +122,12 @@
               "ViewState": "AgIAAD4AAAAAAAAAAAAiwFgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T11:37:27.209Z"
+=======
+              "ViewState": "AgIAAGQAAAAAAAAAAAAqwH8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T12:13:51.517Z",
+              "EditorCaption": ""
+>>>>>>> 45de3dae7e8a83a0c410a943e6264b2ca6381acc
             }
           ]
         }

@@ -52,7 +52,7 @@ namespace Thor_Bar
             this.pictureBox1.BackColor = System.Drawing.Color.DarkOrange;
             this.pictureBox1.Location = new System.Drawing.Point(-1, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1272, 59);
+            this.pictureBox1.Size = new System.Drawing.Size(1451, 59);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -61,14 +61,14 @@ namespace Thor_Bar
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pictureBox2.Location = new System.Drawing.Point(-1, 51);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1272, 31);
+            this.pictureBox2.Size = new System.Drawing.Size(1451, 31);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.DarkOrange;
-            this.pictureBox3.Location = new System.Drawing.Point(410, 368);
+            this.pictureBox3.Location = new System.Drawing.Point(500, 368);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(444, 280);
             this.pictureBox3.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace Thor_Bar
             this.lblUser.AutoSize = true;
             this.lblUser.BackColor = System.Drawing.Color.DarkOrange;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(539, 414);
+            this.lblUser.Location = new System.Drawing.Point(629, 414);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(61, 16);
             this.lblUser.TabIndex = 3;
@@ -90,7 +90,7 @@ namespace Thor_Bar
             this.lblPass.AutoSize = true;
             this.lblPass.BackColor = System.Drawing.Color.DarkOrange;
             this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(539, 492);
+            this.lblPass.Location = new System.Drawing.Point(629, 492);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(75, 16);
             this.lblPass.TabIndex = 4;
@@ -98,14 +98,14 @@ namespace Thor_Bar
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(542, 448);
+            this.txtUser.Location = new System.Drawing.Point(632, 448);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(184, 20);
             this.txtUser.TabIndex = 5;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(542, 521);
+            this.txtPass.Location = new System.Drawing.Point(632, 521);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(184, 20);
@@ -115,7 +115,7 @@ namespace Thor_Bar
             // 
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(586, 557);
+            this.btnLogin.Location = new System.Drawing.Point(676, 557);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(99, 31);
             this.btnLogin.TabIndex = 7;
@@ -126,7 +126,7 @@ namespace Thor_Bar
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Thor_Bar.Properties.Resources.Thor_Bar_Logo;
-            this.pictureBox4.Location = new System.Drawing.Point(496, 88);
+            this.pictureBox4.Location = new System.Drawing.Point(586, 88);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(272, 254);
             this.pictureBox4.TabIndex = 8;
@@ -147,7 +147,7 @@ namespace Thor_Bar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 729);
+            this.ClientSize = new System.Drawing.Size(1444, 729);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnLogin);

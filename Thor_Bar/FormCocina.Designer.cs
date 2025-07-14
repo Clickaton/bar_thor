@@ -50,7 +50,7 @@
             this.lblAdmin.BackColor = System.Drawing.Color.LightGray;
             this.lblAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmin.Location = new System.Drawing.Point(674, 96);
+            this.lblAdmin.Location = new System.Drawing.Point(763, 96);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(148, 24);
             this.lblAdmin.TabIndex = 20;
@@ -63,7 +63,7 @@
             this.lblStock.BackColor = System.Drawing.Color.LightGray;
             this.lblStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(607, 96);
+            this.lblStock.Location = new System.Drawing.Point(696, 96);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(61, 24);
             this.lblStock.TabIndex = 19;
@@ -76,7 +76,7 @@
             this.lblMesas.BackColor = System.Drawing.Color.LightGray;
             this.lblMesas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMesas.Location = new System.Drawing.Point(526, 96);
+            this.lblMesas.Location = new System.Drawing.Point(615, 96);
             this.lblMesas.Name = "lblMesas";
             this.lblMesas.Size = new System.Drawing.Size(70, 24);
             this.lblMesas.TabIndex = 18;
@@ -89,18 +89,19 @@
             this.lblCocina.BackColor = System.Drawing.Color.LightGray;
             this.lblCocina.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCocina.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCocina.Location = new System.Drawing.Point(445, 96);
+            this.lblCocina.Location = new System.Drawing.Point(534, 96);
             this.lblCocina.Name = "lblCocina";
             this.lblCocina.Size = new System.Drawing.Size(75, 24);
             this.lblCocina.TabIndex = 17;
             this.lblCocina.Text = "Cocina";
+            this.lblCocina.Click += new System.EventHandler(this.lblCocina_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.LightGray;
             this.pictureBox4.Location = new System.Drawing.Point(-1, 80);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1272, 54);
+            this.pictureBox4.Size = new System.Drawing.Size(1453, 54);
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;
             // 
@@ -109,7 +110,7 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pictureBox2.Location = new System.Drawing.Point(-1, 53);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1272, 31);
+            this.pictureBox2.Size = new System.Drawing.Size(1453, 31);
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
             // 
@@ -118,7 +119,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.DarkOrange;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1272, 59);
+            this.pictureBox1.Size = new System.Drawing.Size(1453, 59);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
@@ -136,9 +137,9 @@
             // flpPedidos
             // 
             this.flpPedidos.AutoScroll = true;
-            this.flpPedidos.Location = new System.Drawing.Point(-1, 131);
+            this.flpPedidos.Location = new System.Drawing.Point(-4, 131);
             this.flpPedidos.Name = "flpPedidos";
-            this.flpPedidos.Size = new System.Drawing.Size(971, 586);
+            this.flpPedidos.Size = new System.Drawing.Size(1453, 586);
             this.flpPedidos.TabIndex = 43;
             this.flpPedidos.Paint += new System.Windows.Forms.PaintEventHandler(this.flpPedidos_Paint);
             // 
@@ -147,7 +148,7 @@
             this.lblExit.AutoSize = true;
             this.lblExit.BackColor = System.Drawing.Color.LightGray;
             this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExit.Location = new System.Drawing.Point(1201, 96);
+            this.lblExit.Location = new System.Drawing.Point(1149, 96);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(51, 24);
             this.lblExit.TabIndex = 46;
@@ -158,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 729);
+            this.ClientSize = new System.Drawing.Size(1444, 729);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.flpPedidos);
             this.Controls.Add(this.pictureBox3);
