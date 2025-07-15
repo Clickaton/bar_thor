@@ -64,8 +64,10 @@ namespace Thor_Bar
             cmbRol.DataSource = Enum.GetValues(typeof(RolUsuario));
             VerificarYAgregarColumnas();
             lblValorTotal.Text = consultaComprobantesDelDia().ToString();
+            lbl_tGastos.Text = consultaGastosDelDia().ToString();
+            lbl_tValue.Text = consultaComprobantesDelDia().ToString() ;
             lblFechaActual.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            List<Usuario> usuarios = ObtenerUsuarios();
+            List<Usuario> usuarios = ObtenerUsuarios(); 
             CargarUsuariosEnGrid(usuarios);
             EstilizarDataGridView();
 
@@ -220,6 +222,44 @@ namespace Thor_Bar
             }
 
             return totalVentasDia;
+        }
+
+        private string consultaGastosDelDia()
+        {
+            string totalGastosDia = "";
+            try
+            {
+                string fechaHoy = DateTime.Today.ToString("yyyy-MM-dd");
+
+                DatabaseConnection db = new DatabaseConnection();
+                db.OpenConnection();
+
+                string query = @"
+            SELECT SUM(g.monto) AS gasto_total_dia
+            FROM gastos g
+            WHERE g.fecha = @fechaHoy;
+        ";
+
+                SQLiteCommand cmd = new SQLiteCommand(query, db.GetConnection());
+                cmd.Parameters.AddWithValue("@fechaHoy", fechaHoy);
+
+                object resultado = cmd.ExecuteScalar();
+                decimal total = 0;
+
+                if (resultado != DBNull.Value && resultado != null)
+                {
+                    total = Convert.ToDecimal(resultado);
+                    totalGastosDia = '$' + total.ToString("F2");
+                }
+
+                db.CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar gastos del día: " + ex.Message);
+            }
+
+            return totalGastosDia;
         }
 
         private void CargarUsuariosEnGrid(List<Usuario> usuarios)
@@ -902,5 +942,49 @@ namespace Thor_Bar
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string fechaHoy = DateTime.Today.ToString("yyyy-MM-dd");
+                decimal montoCaja = 1234.56m; // 👈 Reemplazá esto con el monto real
+
+                DatabaseConnection db = new DatabaseConnection();
+                db.OpenConnection();
+
+                string query = @"
+            INSERT INTO cierreCaja (monto, fecha)
+            VALUES (@monto, @fecha);
+        ";
+
+                SQLiteCommand cmd = new SQLiteCommand(query, db.GetConnection());
+                cmd.Parameters.AddWithValue("@monto", montoCaja);
+                cmd.Parameters.AddWithValue("@fecha", fechaHoy);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                db.CloseConnection();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Cierre de caja registrado correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("No se insertó ningún dato.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar el cierre de caja: " + ex.Message);
+            }
+        }
     }
 }
