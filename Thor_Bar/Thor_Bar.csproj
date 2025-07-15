@@ -132,6 +132,12 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCierreCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCierreCaja.Designer.cs">
+      <DependentUpon>FormCierreCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCocina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCierreCaja.resx">
+      <DependentUpon>FormCierreCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCocina.resx">
       <DependentUpon>FormCocina.cs</DependentUpon>

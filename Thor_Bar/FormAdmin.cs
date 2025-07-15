@@ -951,39 +951,55 @@ namespace Thor_Bar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            // Mostrar el formulario para ingresar el monto
+            FormCierreCaja form = new FormCierreCaja();
+            if (form.ShowDialog() == DialogResult.OK)
             {
-                string fechaHoy = DateTime.Today.ToString("yyyy-MM-dd");
-                decimal montoCaja = 1234.56m; // 👈 Reemplazá esto con el monto real
-
-                DatabaseConnection db = new DatabaseConnection();
-                db.OpenConnection();
-
-                string query = @"
-            INSERT INTO cierreCaja (monto, fecha)
-            VALUES (@monto, @fecha);
-        ";
-
-                SQLiteCommand cmd = new SQLiteCommand(query, db.GetConnection());
-                cmd.Parameters.AddWithValue("@monto", montoCaja);
-                cmd.Parameters.AddWithValue("@fecha", fechaHoy);
-
-                int rowsAffected = cmd.ExecuteNonQuery();
-
-                db.CloseConnection();
-
-                if (rowsAffected > 0)
+                try
                 {
-                    MessageBox.Show("Cierre de caja registrado correctamente.");
+                    string fechaHoy = DateTime.Today.ToString("yyyy-MM-dd");
+                    decimal montoCaja = form.MontoIngresado;
+
+                    DatabaseConnection db = new DatabaseConnection();
+                    db.OpenConnection();
+
+                    // Verificar si ya existe un cierre para hoy
+                    string checkQuery = "SELECT COUNT(*) FROM cierreCaja WHERE fecha = @fecha;";
+                    SQLiteCommand checkCmd = new SQLiteCommand(checkQuery, db.GetConnection());
+                    checkCmd.Parameters.AddWithValue("@fecha", fechaHoy);
+
+                    long count = (long)checkCmd.ExecuteScalar();
+
+                    string query;
+                    SQLiteCommand cmd;
+
+                    if (count > 0)
+                    {
+                        // Ya existe → actualizar monto
+                        query = "UPDATE cierreCaja SET monto = @monto WHERE fecha = @fecha;";
+                        cmd = new SQLiteCommand(query, db.GetConnection());
+                        cmd.Parameters.AddWithValue("@monto", montoCaja);
+                        cmd.Parameters.AddWithValue("@fecha", fechaHoy);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Cierre de caja actualizado correctamente.");
+                    }
+                    else
+                    {
+                        // No existe → insertar nuevo
+                        query = "INSERT INTO cierreCaja (monto, fecha) VALUES (@monto, @fecha);";
+                        cmd = new SQLiteCommand(query, db.GetConnection());
+                        cmd.Parameters.AddWithValue("@monto", montoCaja);
+                        cmd.Parameters.AddWithValue("@fecha", fechaHoy);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Cierre de caja registrado correctamente.");
+                    }
+
+                    db.CloseConnection();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("No se insertó ningún dato.");
+                    MessageBox.Show("Error al guardar cierre de caja: " + ex.Message);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al registrar el cierre de caja: " + ex.Message);
             }
         }
     }

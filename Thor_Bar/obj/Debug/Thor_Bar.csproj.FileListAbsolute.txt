@@ -346,3 +346,4 @@ C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.
 C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.csproj.Up2Date
 C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.exe
 C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.pdb
+C:\Users\chris\OneDrive\Escritorio\Carpeta\bar_thor\Thor_Bar\obj\Debug\Thor_Bar.FormCierreCaja.resources
