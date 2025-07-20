@@ -66,6 +66,8 @@ namespace Thor_Bar
             lblValorTotal.Text = consultaComprobantesDelDia().ToString();
             lbl_tGastos.Text = consultaGastosDelDia().ToString();
             lbl_tValue.Text = consultaComprobantesDelDia().ToString() ;
+            lbl_vCierreAnterior.Text = consultaCierreAnterior().ToString();
+            lbl_dineroEsperado.Text = dineroEsperado();
             lblFechaActual.Text = DateTime.Now.ToString("dd/MM/yyyy");
             List<Usuario> usuarios = ObtenerUsuarios(); 
             CargarUsuariosEnGrid(usuarios);
@@ -96,6 +98,65 @@ namespace Thor_Bar
             tabAdmin.SelectedIndexChanged += TabControlAdmin_SelectedIndexChanged;
         }
 
+        public string dineroEsperado() {
+            decimal ventas = decimal.Parse(consultaComprobantesDelDia().Replace("$", ""));
+            decimal gastos = decimal.Parse(consultaGastosDelDia().Replace("$", ""));
+            decimal cierreCaja = decimal.Parse(consultaCierreAnterior().Replace("$", ""));
+            string resultado = (ventas + cierreCaja - gastos).ToString();
+
+            return "$"+resultado;
+        }
+
+        public string consultaCierreAnterior()
+        {
+            string cierreAnterior = "";
+            try
+            {
+                DateTime fechaAyer = DateTime.Today.AddDays(-1);
+
+                using (DatabaseConnection db = new DatabaseConnection())
+                {
+                    db.OpenConnection();
+
+                    string query = @"
+                SELECT c.monto 
+                FROM cierreCaja c
+                WHERE c.fecha = @fechaAyer;
+            ";
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, db.GetConnection()))
+                    {
+                        cmd.Parameters.AddWithValue("@fechaAyer", fechaAyer.ToString("yyyy-MM-dd"));
+
+                        object resultado = cmd.ExecuteScalar();
+
+                        if (resultado != null && resultado != DBNull.Value)
+                        {
+                            if (decimal.TryParse(resultado.ToString(), out decimal total))
+                            {
+                                cierreAnterior = "$" + total.ToString("N2"); // Formato con 2 decimales
+                            }
+                            else
+                            {
+                                cierreAnterior = "Error: no se pudo convertir el monto.";
+                            }
+                        }
+                        else
+                        {
+                            cierreAnterior = "No hay cierre registrado para ayer.";
+                        }
+                    }
+
+                    db.CloseConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar cierre anterior: " + ex.Message);
+            }
+
+            return cierreAnterior;
+        }
         private void CargarGastos()
         {
             try
@@ -1001,6 +1062,11 @@ namespace Thor_Bar
                     MessageBox.Show("Error al guardar cierre de caja: " + ex.Message);
                 }
             }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
